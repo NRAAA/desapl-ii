@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CandidatosIsilModelStoreContainer" CdmEntityContainer="CandidatosIsilEntities">
+    <EntitySetMapping Name="Tb_Actividad">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Actividad">
+        <MappingFragment StoreEntitySet="Tb_Actividad">
+          <ScalarProperty Name="id_actividad" ColumnName="id_actividad" />
+          <ScalarProperty Name="titulo_act" ColumnName="titulo_act" />
+          <ScalarProperty Name="tema_act" ColumnName="tema_act" />
+          <ScalarProperty Name="desc_act" ColumnName="desc_act" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Actividad_Asignada">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Actividad_Asignada">
+        <MappingFragment StoreEntitySet="Tb_Actividad_Asignada">
+          <ScalarProperty Name="id_actividad" ColumnName="id_actividad" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="id_curso_prog" ColumnName="id_curso_prog" />
+          <ScalarProperty Name="id_tipo_nota" ColumnName="id_tipo_nota" />
+          <ScalarProperty Name="fec_ini" ColumnName="fec_ini" />
+          <ScalarProperty Name="fec_entrega" ColumnName="fec_entrega" />
+          <ScalarProperty Name="nota_act" ColumnName="nota_act" />
+          <ScalarProperty Name="coment_prof" ColumnName="coment_prof" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Actividad_Extra">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Actividad_Extra">
+        <MappingFragment StoreEntitySet="Tb_Actividad_Extra">
+          <ScalarProperty Name="id_actividad_ext" ColumnName="id_actividad_ext" />
+          <ScalarProperty Name="titulo_act_ext" ColumnName="titulo_act_ext" />
+          <ScalarProperty Name="tema_act_ext" ColumnName="tema_act_ext" />
+          <ScalarProperty Name="desc_act_ext" ColumnName="desc_act_ext" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Alumno">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Alumno">
+        <MappingFragment StoreEntitySet="Tb_Alumno">
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="id_consejero" ColumnName="id_consejero" />
+          <ScalarProperty Name="dni_alumno" ColumnName="dni_alumno" />
+          <ScalarProperty Name="nomb_alumno" ColumnName="nomb_alumno" />
+          <ScalarProperty Name="ape_alumno" ColumnName="ape_alumno" />
+          <ScalarProperty Name="ubi_alumno" ColumnName="ubi_alumno" />
+          <ScalarProperty Name="tel_alumno" ColumnName="tel_alumno" />
+          <ScalarProperty Name="email_alumno" ColumnName="email_alumno" />
+          <ScalarProperty Name="fec_inscrip" ColumnName="fec_inscrip" />
+          <ScalarProperty Name="prom_global" ColumnName="prom_global" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Carrera">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Carrera">
+        <MappingFragment StoreEntitySet="Tb_Carrera">
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+          <ScalarProperty Name="id_coordinador" ColumnName="id_coordinador" />
+          <ScalarProperty Name="id_facultad" ColumnName="id_facultad" />
+          <ScalarProperty Name="nomb_carrera" ColumnName="nomb_carrera" />
+          <ScalarProperty Name="desc_carrera" ColumnName="desc_carrera" />
+          <ScalarProperty Name="fec_creacion" ColumnName="fec_creacion" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Ciclo">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Ciclo">
+        <MappingFragment StoreEntitySet="Tb_Ciclo">
+          <ScalarProperty Name="id_ciclo" ColumnName="id_ciclo" />
+          <ScalarProperty Name="fec_inicio_ciclo" ColumnName="fec_inicio_ciclo" />
+          <ScalarProperty Name="fec_fin_ciclo" ColumnName="fec_fin_ciclo" />
+          <ScalarProperty Name="num_fer_prog_ciclo" ColumnName="num_fer_prog_ciclo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Consejero">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Consejero">
+        <MappingFragment StoreEntitySet="Tb_Consejero">
+          <ScalarProperty Name="id_consejero" ColumnName="id_consejero" />
+          <ScalarProperty Name="id_sede" ColumnName="id_sede" />
+          <ScalarProperty Name="dni_consejero" ColumnName="dni_consejero" />
+          <ScalarProperty Name="nomb_consejero" ColumnName="nomb_consejero" />
+          <ScalarProperty Name="ape_consejero" ColumnName="ape_consejero" />
+          <ScalarProperty Name="ubi_consejero" ColumnName="ubi_consejero" />
+          <ScalarProperty Name="tel_consejero" ColumnName="tel_consejero" />
+          <ScalarProperty Name="email_consejero" ColumnName="email_consejero" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Coordinador">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Coordinador">
+        <MappingFragment StoreEntitySet="Tb_Coordinador">
+          <ScalarProperty Name="id_coordinador" ColumnName="id_coordinador" />
+          <ScalarProperty Name="nomb_coord" ColumnName="nomb_coord" />
+          <ScalarProperty Name="ape_coord" ColumnName="ape_coord" />
+          <ScalarProperty Name="ubi_coord" ColumnName="ubi_coord" />
+          <ScalarProperty Name="tel_coord" ColumnName="tel_coord" />
+          <ScalarProperty Name="email_coord" ColumnName="email_coord" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Curso">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Curso">
+        <MappingFragment StoreEntitySet="Tb_Curso">
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+          <ScalarProperty Name="id_pre_req_curso" ColumnName="id_pre_req_curso" />
+          <ScalarProperty Name="desc_curso" ColumnName="desc_curso" />
+          <ScalarProperty Name="fec_crea" ColumnName="fec_crea" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Curso_Programado">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Curso_Programado">
+        <MappingFragment StoreEntitySet="Tb_Curso_Programado">
+          <ScalarProperty Name="id_curso_prog" ColumnName="id_curso_prog" />
+          <ScalarProperty Name="id_laboratorio" ColumnName="id_laboratorio" />
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+          <ScalarProperty Name="id_ciclo" ColumnName="id_ciclo" />
+          <ScalarProperty Name="num_horas" ColumnName="num_horas" />
+          <ScalarProperty Name="cant_clases" ColumnName="cant_clases" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Estudio">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Estudio">
+        <MappingFragment StoreEntitySet="Tb_Estudio">
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="id_curso_prog" ColumnName="id_curso_prog" />
+          <ScalarProperty Name="fec_matricula" ColumnName="fec_matricula" />
+          <ScalarProperty Name="prom_ua" ColumnName="prom_ua" />
+          <ScalarProperty Name="prom_ep" ColumnName="prom_ep" />
+          <ScalarProperty Name="exa_parc" ColumnName="exa_parc" />
+          <ScalarProperty Name="exa_fin" ColumnName="exa_fin" />
+          <ScalarProperty Name="nota_fin" ColumnName="nota_fin" />
+          <ScalarProperty Name="cant_inasist" ColumnName="cant_inasist" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Facultad">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Facultad">
+        <MappingFragment StoreEntitySet="Tb_Facultad">
+          <ScalarProperty Name="id_facultad" ColumnName="id_facultad" />
+          <ScalarProperty Name="desc_facultad" ColumnName="desc_facultad" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Laboratorio">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Laboratorio">
+        <MappingFragment StoreEntitySet="Tb_Laboratorio">
+          <ScalarProperty Name="id_laboratorio" ColumnName="id_laboratorio" />
+          <ScalarProperty Name="id_sede" ColumnName="id_sede" />
+          <ScalarProperty Name="bloque_lab" ColumnName="bloque_lab" />
+          <ScalarProperty Name="num_lab" ColumnName="num_lab" />
+          <ScalarProperty Name="aforo_lab" ColumnName="aforo_lab" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Profesor">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Profesor">
+        <MappingFragment StoreEntitySet="Tb_Profesor">
+          <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+          <ScalarProperty Name="nomb_profesor" ColumnName="nomb_profesor" />
+          <ScalarProperty Name="ape_profesor" ColumnName="ape_profesor" />
+          <ScalarProperty Name="ubi_profesor" ColumnName="ubi_profesor" />
+          <ScalarProperty Name="tel_profesor" ColumnName="tel_profesor" />
+          <ScalarProperty Name="email_profesor" ColumnName="email_profesor" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Registro_Usuario">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Registro_Usuario">
+        <MappingFragment StoreEntitySet="Tb_Registro_Usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="fec_ingreso" ColumnName="fec_ingreso" />
+          <ScalarProperty Name="fec_salida" ColumnName="fec_salida" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Rol">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Rol">
+        <MappingFragment StoreEntitySet="Tb_Rol">
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="nomb_rol" ColumnName="nomb_rol" />
+          <ScalarProperty Name="desc_rol" ColumnName="desc_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Sede">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Sede">
+        <MappingFragment StoreEntitySet="Tb_Sede">
+          <ScalarProperty Name="id_sede" ColumnName="id_sede" />
+          <ScalarProperty Name="ubi_sede" ColumnName="ubi_sede" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Seleccion_Act_Extra">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Seleccion_Act_Extra">
+        <MappingFragment StoreEntitySet="Tb_Seleccion_Act_Extra">
+          <ScalarProperty Name="id_actividad_ext" ColumnName="id_actividad_ext" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="fec_ini" ColumnName="fec_ini" />
+          <ScalarProperty Name="fec_fin" ColumnName="fec_fin" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Tipo_Nota">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Tipo_Nota">
+        <MappingFragment StoreEntitySet="Tb_Tipo_Nota">
+          <ScalarProperty Name="id_tipo_nota" ColumnName="id_tipo_nota" />
+          <ScalarProperty Name="tipo_nota" ColumnName="tipo_nota" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Usuario">
+      <EntityTypeMapping TypeName="CandidatosIsilModel.Tb_Usuario">
+        <MappingFragment StoreEntitySet="Tb_Usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="nick_usuario" ColumnName="nick_usuario" />
+          <ScalarProperty Name="pass_usuario" ColumnName="pass_usuario" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_AlumnoNotasDni" FunctionName="CandidatosIsilModel.Store.usp_AlumnoNotasDni">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CandidatosIsilModel.usp_AlumnoNotasDni_Result">
+          <ScalarProperty Name="nomb_alumno" ColumnName="nomb_alumno" />
+          <ScalarProperty Name="ape_alumno" ColumnName="ape_alumno" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="titulo_act" ColumnName="titulo_act" />
+          <ScalarProperty Name="tema_act" ColumnName="tema_act" />
+          <ScalarProperty Name="desc_act" ColumnName="desc_act" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="tipo_nota" ColumnName="tipo_nota" />
+          <ScalarProperty Name="profesor" ColumnName="profesor" />
+          <ScalarProperty Name="comentarios_profesor" ColumnName="comentarios_profesor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AlumnoPorcInasistDni" FunctionName="CandidatosIsilModel.Store.usp_AlumnoPorcInasistDni">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CandidatosIsilModel.usp_AlumnoPorcInasistDni_Result">
+          <ScalarProperty Name="nomb_alumno" ColumnName="nomb_alumno" />
+          <ScalarProperty Name="ape_alumno" ColumnName="ape_alumno" />
+          <ScalarProperty Name="porc_inasist" ColumnName="porc_inasist" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AlumnoPromedioCursoDni" FunctionName="CandidatosIsilModel.Store.usp_AlumnoPromedioCursoDni">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CandidatosIsilModel.usp_AlumnoPromedioCursoDni_Result">
+          <ScalarProperty Name="nomb_alumno" ColumnName="nomb_alumno" />
+          <ScalarProperty Name="ape_alumno" ColumnName="ape_alumno" />
+          <ScalarProperty Name="profesor" ColumnName="profesor" />
+          <ScalarProperty Name="curso" ColumnName="curso" />
+          <ScalarProperty Name="prom_ua" ColumnName="prom_ua" />
+          <ScalarProperty Name="prom_ep" ColumnName="prom_ep" />
+          <ScalarProperty Name="exa_parc" ColumnName="exa_parc" />
+          <ScalarProperty Name="exa_fin" ColumnName="exa_fin" />
+          <ScalarProperty Name="cant_inasist" ColumnName="cant_inasist" />
+          <ScalarProperty Name="cant_clases" ColumnName="cant_clases" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AlumnoOcurrencias" FunctionName="CandidatosIsilModel.Store.usp_AlumnoOcurrencias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CandidatosIsilModel.usp_AlumnoOcurrencias_Result">
+          <ScalarProperty Name="nomb_alumno" ColumnName="nomb_alumno" />
+          <ScalarProperty Name="ape_alumno" ColumnName="ape_alumno" />
+          <ScalarProperty Name="ocurrencia" ColumnName="ocurrencia" />
+          <ScalarProperty Name="ocu_fecha" ColumnName="ocu_fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

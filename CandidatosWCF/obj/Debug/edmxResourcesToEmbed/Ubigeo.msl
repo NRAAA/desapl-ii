@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UBIGEOModelStoreContainer" CdmEntityContainer="UBIGEOEntities">
+    <FunctionImportMapping FunctionImportName="UBIGEO_CIUDADESPAIS" FunctionName="UBIGEOModel.Store.UBIGEO_CIUDADESPAIS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_CIUDADESPAIS_Result">
+          <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UBIGEO_CONTINENTE" FunctionName="UBIGEOModel.Store.UBIGEO_CONTINENTE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_CONTINENTE_Result">
+          <ScalarProperty Name="IDCONTINENTE" ColumnName="IDCONTINENTE" />
+          <ScalarProperty Name="CONTINENTE" ColumnName="CONTINENTE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UBIGEO_DEPARTAMENTOS" FunctionName="UBIGEOModel.Store.UBIGEO_DEPARTAMENTOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_DEPARTAMENTOS_Result">
+          <ScalarProperty Name="IDDEPA" ColumnName="IDDEPA" />
+          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UBIGEO_DISTRITOSPROVINCIA" FunctionName="UBIGEOModel.Store.UBIGEO_DISTRITOSPROVINCIA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_DISTRITOSPROVINCIA_Result">
+          <ScalarProperty Name="IDDIST" ColumnName="IDDIST" />
+          <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UBIGEO_PAISESCONTINENTE" FunctionName="UBIGEOModel.Store.UBIGEO_PAISESCONTINENTE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_PAISESCONTINENTE_Result">
+          <ScalarProperty Name="IDPAIS" ColumnName="IDPAIS" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UBIGEO_PROVINCIASDEPARTAMENTO" FunctionName="UBIGEOModel.Store.UBIGEO_PROVINCIASDEPARTAMENTO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_PROVINCIASDEPARTAMENTO_Result">
+          <ScalarProperty Name="IDPROV" ColumnName="IDPROV" />
+          <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_UbigeoCadena" FunctionName="UBIGEOModel.Store.usp_UbigeoCadena">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UBIGEOModel.usp_UbigeoCadena_Result">
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

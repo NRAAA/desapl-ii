@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UBIGEOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UBIGEOEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="UBIGEO_CIUDADESPAIS" ReturnType="Collection(UBIGEOModel.UBIGEO_CIUDADESPAIS_Result)">
+      <Parameter Name="IdContinente" Mode="In" Type="String" />
+      <Parameter Name="IdPais" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UBIGEO_CONTINENTE" ReturnType="Collection(UBIGEOModel.UBIGEO_CONTINENTE_Result)" />
+    <FunctionImport Name="UBIGEO_DEPARTAMENTOS" ReturnType="Collection(UBIGEOModel.UBIGEO_DEPARTAMENTOS_Result)" />
+    <FunctionImport Name="UBIGEO_DISTRITOSPROVINCIA" ReturnType="Collection(UBIGEOModel.UBIGEO_DISTRITOSPROVINCIA_Result)">
+      <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+      <Parameter Name="IdProvincia" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UBIGEO_PAISESCONTINENTE" ReturnType="Collection(UBIGEOModel.UBIGEO_PAISESCONTINENTE_Result)">
+      <Parameter Name="IdContinente" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UBIGEO_PROVINCIASDEPARTAMENTO" ReturnType="Collection(UBIGEOModel.UBIGEO_PROVINCIASDEPARTAMENTO_Result)">
+      <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_UbigeoCadena" ReturnType="Collection(UBIGEOModel.usp_UbigeoCadena_Result)">
+      <Parameter Name="vdepa" Mode="In" Type="String" />
+      <Parameter Name="vprov" Mode="In" Type="String" />
+      <Parameter Name="vdist" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="UBIGEO_CIUDADESPAIS_Result">
+    <Property Type="String" Name="IDCIUDAD" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="CIUDAD" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UBIGEO_CONTINENTE_Result">
+    <Property Type="String" Name="IDCONTINENTE" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="CONTINENTE" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UBIGEO_DEPARTAMENTOS_Result">
+    <Property Type="String" Name="IDDEPA" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="DEPARTAMENTO" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UBIGEO_DISTRITOSPROVINCIA_Result">
+    <Property Type="String" Name="IDDIST" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="DISTRITO" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UBIGEO_PAISESCONTINENTE_Result">
+    <Property Type="String" Name="IDPAIS" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PAIS" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="UBIGEO_PROVINCIASDEPARTAMENTO_Result">
+    <Property Type="String" Name="IDPROV" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PROVINCIA" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="usp_UbigeoCadena_Result">
+    <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Provincia" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Distrito" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

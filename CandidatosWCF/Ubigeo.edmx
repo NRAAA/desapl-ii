@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UBIGEOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="UBIGEO_CIUDADESPAIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdContinente" Type="char" Mode="In" />
+          <Parameter Name="IdPais" Type="char" Mode="In" />
+        </Function>
+        <Function Name="UBIGEO_CONTINENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UBIGEO_DEPARTAMENTOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UBIGEO_DISTRITOSPROVINCIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+          <Parameter Name="IdProvincia" Type="char" Mode="In" />
+        </Function>
+        <Function Name="UBIGEO_PAISESCONTINENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdContinente" Type="char" Mode="In" />
+        </Function>
+        <Function Name="UBIGEO_PROVINCIASDEPARTAMENTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_UbigeoCadena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vdepa" Type="nvarchar" Mode="In" />
+          <Parameter Name="vprov" Type="nvarchar" Mode="In" />
+          <Parameter Name="vdist" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="UBIGEOModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UBIGEOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="UBIGEOEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="UBIGEO_CIUDADESPAIS" ReturnType="Collection(UBIGEOModel.UBIGEO_CIUDADESPAIS_Result)">
+            <Parameter Name="IdContinente" Mode="In" Type="String" />
+            <Parameter Name="IdPais" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UBIGEO_CONTINENTE" ReturnType="Collection(UBIGEOModel.UBIGEO_CONTINENTE_Result)" />
+          <FunctionImport Name="UBIGEO_DEPARTAMENTOS" ReturnType="Collection(UBIGEOModel.UBIGEO_DEPARTAMENTOS_Result)" />
+          <FunctionImport Name="UBIGEO_DISTRITOSPROVINCIA" ReturnType="Collection(UBIGEOModel.UBIGEO_DISTRITOSPROVINCIA_Result)">
+            <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+            <Parameter Name="IdProvincia" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UBIGEO_PAISESCONTINENTE" ReturnType="Collection(UBIGEOModel.UBIGEO_PAISESCONTINENTE_Result)">
+          <Parameter Name="IdContinente" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UBIGEO_PROVINCIASDEPARTAMENTO" ReturnType="Collection(UBIGEOModel.UBIGEO_PROVINCIASDEPARTAMENTO_Result)">
+          <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UbigeoCadena" ReturnType="Collection(UBIGEOModel.usp_UbigeoCadena_Result)">
+            <Parameter Name="vdepa" Mode="In" Type="String" />
+            <Parameter Name="vprov" Mode="In" Type="String" />
+            <Parameter Name="vdist" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="UBIGEO_CIUDADESPAIS_Result">
+          <Property Type="String" Name="IDCIUDAD" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CIUDAD" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="UBIGEO_CONTINENTE_Result">
+          <Property Type="String" Name="IDCONTINENTE" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CONTINENTE" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="UBIGEO_DEPARTAMENTOS_Result">
+          <Property Type="String" Name="IDDEPA" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DEPARTAMENTO" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="UBIGEO_DISTRITOSPROVINCIA_Result">
+          <Property Type="String" Name="IDDIST" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DISTRITO" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="UBIGEO_PAISESCONTINENTE_Result">
+          <Property Type="String" Name="IDPAIS" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PAIS" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="UBIGEO_PROVINCIASDEPARTAMENTO_Result">
+          <Property Type="String" Name="IDPROV" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PROVINCIA" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_UbigeoCadena_Result">
+          <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="255" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UBIGEOModelStoreContainer" CdmEntityContainer="UBIGEOEntities" >
+          <FunctionImportMapping FunctionImportName="UBIGEO_CIUDADESPAIS" FunctionName="UBIGEOModel.Store.UBIGEO_CIUDADESPAIS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_CIUDADESPAIS_Result">
+                <ScalarProperty Name="IDCIUDAD" ColumnName="IDCIUDAD" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UBIGEO_CONTINENTE" FunctionName="UBIGEOModel.Store.UBIGEO_CONTINENTE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_CONTINENTE_Result">
+                <ScalarProperty Name="IDCONTINENTE" ColumnName="IDCONTINENTE" />
+                <ScalarProperty Name="CONTINENTE" ColumnName="CONTINENTE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UBIGEO_DEPARTAMENTOS" FunctionName="UBIGEOModel.Store.UBIGEO_DEPARTAMENTOS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_DEPARTAMENTOS_Result">
+                <ScalarProperty Name="IDDEPA" ColumnName="IDDEPA" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UBIGEO_DISTRITOSPROVINCIA" FunctionName="UBIGEOModel.Store.UBIGEO_DISTRITOSPROVINCIA">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_DISTRITOSPROVINCIA_Result">
+                <ScalarProperty Name="IDDIST" ColumnName="IDDIST" />
+                <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UBIGEO_PAISESCONTINENTE" FunctionName="UBIGEOModel.Store.UBIGEO_PAISESCONTINENTE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_PAISESCONTINENTE_Result">
+                <ScalarProperty Name="IDPAIS" ColumnName="IDPAIS" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UBIGEO_PROVINCIASDEPARTAMENTO" FunctionName="UBIGEOModel.Store.UBIGEO_PROVINCIASDEPARTAMENTO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.UBIGEO_PROVINCIASDEPARTAMENTO_Result">
+                <ScalarProperty Name="IDPROV" ColumnName="IDPROV" />
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_UbigeoCadena" FunctionName="UBIGEOModel.Store.usp_UbigeoCadena">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="UBIGEOModel.usp_UbigeoCadena_Result">
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

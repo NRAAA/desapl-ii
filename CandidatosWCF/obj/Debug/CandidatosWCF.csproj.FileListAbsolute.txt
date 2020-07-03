@@ -1,0 +1,36 @@
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.dll.config
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.pdb
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.xml
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csprojAssemblyReference.cache
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompileInputs.cache
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S09\AVANCE 2\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.pdb
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.dll.config
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\CandidatosWCF.pdb
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.xml
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csprojAssemblyReference.cache
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompileInputs.cache
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\Avance2_RojasArtadi\CandidatosWCF\obj\Debug\CandidatosWCF.pdb
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.csprojAssemblyReference.cache
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompileInputs.cache
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.pdb
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\CandidatosWCF.dll.config
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\CandidatosWCF.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\CandidatosWCF.pdb
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.xml
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete

@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CandidatosIsilModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tb_Actividad">
+    <Key>
+      <PropertyRef Name="id_actividad" />
+    </Key>
+    <Property Name="id_actividad" Type="int" Nullable="false" />
+    <Property Name="titulo_act" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="tema_act" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="desc_act" Type="varchar" MaxLength="625" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Actividad_Asignada">
+    <Key>
+      <PropertyRef Name="id_actividad" />
+      <PropertyRef Name="id_alumno" />
+      <PropertyRef Name="id_curso_prog" />
+    </Key>
+    <Property Name="id_actividad" Type="int" Nullable="false" />
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="id_curso_prog" Type="int" Nullable="false" />
+    <Property Name="id_tipo_nota" Type="int" />
+    <Property Name="fec_ini" Type="date" Nullable="false" />
+    <Property Name="fec_entrega" Type="date" />
+    <Property Name="nota_act" Type="int" />
+    <Property Name="coment_prof" Type="varchar" MaxLength="625" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Actividad_Extra">
+    <Key>
+      <PropertyRef Name="id_actividad_ext" />
+    </Key>
+    <Property Name="id_actividad_ext" Type="int" Nullable="false" />
+    <Property Name="titulo_act_ext" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="tema_act_ext" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="desc_act_ext" Type="varchar" MaxLength="625" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Alumno">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+    </Key>
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="id_consejero" Type="int" />
+    <Property Name="dni_alumno" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="nomb_alumno" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ape_alumno" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="ubi_alumno" Type="char" MaxLength="6" />
+    <Property Name="tel_alumno" Type="char" MaxLength="9" />
+    <Property Name="email_alumno" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="fec_inscrip" Type="date" Nullable="false" />
+    <Property Name="prom_global" Type="float" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Carrera">
+    <Key>
+      <PropertyRef Name="id_carrera" />
+    </Key>
+    <Property Name="id_carrera" Type="int" Nullable="false" />
+    <Property Name="id_coordinador" Type="int" Nullable="false" />
+    <Property Name="id_facultad" Type="int" Nullable="false" />
+    <Property Name="nomb_carrera" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="desc_carrera" Type="varchar" MaxLength="625" />
+    <Property Name="fec_creacion" Type="date" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Ciclo">
+    <Key>
+      <PropertyRef Name="id_ciclo" />
+    </Key>
+    <Property Name="id_ciclo" Type="int" Nullable="false" />
+    <Property Name="fec_inicio_ciclo" Type="date" Nullable="false" />
+    <Property Name="fec_fin_ciclo" Type="date" Nullable="false" />
+    <Property Name="num_fer_prog_ciclo" Type="int" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Consejero">
+    <Key>
+      <PropertyRef Name="id_consejero" />
+    </Key>
+    <Property Name="id_consejero" Type="int" Nullable="false" />
+    <Property Name="id_sede" Type="int" Nullable="false" />
+    <Property Name="dni_consejero" Type="char" MaxLength="9" />
+    <Property Name="nomb_consejero" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ape_consejero" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="ubi_consejero" Type="char" MaxLength="6" />
+    <Property Name="tel_consejero" Type="char" MaxLength="9" />
+    <Property Name="email_consejero" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Coordinador">
+    <Key>
+      <PropertyRef Name="id_coordinador" />
+    </Key>
+    <Property Name="id_coordinador" Type="int" Nullable="false" />
+    <Property Name="nomb_coord" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ape_coord" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="ubi_coord" Type="char" MaxLength="6" />
+    <Property Name="tel_coord" Type="char" MaxLength="9" />
+    <Property Name="email_coord" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Curso">
+    <Key>
+      <PropertyRef Name="id_curso" />
+    </Key>
+    <Property Name="id_curso" Type="int" Nullable="false" />
+    <Property Name="id_carrera" Type="int" />
+    <Property Name="id_pre_req_curso" Type="int" />
+    <Property Name="desc_curso" Type="varchar" MaxLength="625" Nullable="false" />
+    <Property Name="fec_crea" Type="date" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Curso_Programado">
+    <Key>
+      <PropertyRef Name="id_curso_prog" />
+    </Key>
+    <Property Name="id_curso_prog" Type="int" Nullable="false" />
+    <Property Name="id_laboratorio" Type="int" />
+    <Property Name="id_curso" Type="int" Nullable="false" />
+    <Property Name="id_profesor" Type="int" Nullable="false" />
+    <Property Name="id_ciclo" Type="int" Nullable="false" />
+    <Property Name="num_horas" Type="int" />
+    <Property Name="cant_clases" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Estudio">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+      <PropertyRef Name="id_curso_prog" />
+    </Key>
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="id_curso_prog" Type="int" Nullable="false" />
+    <Property Name="fec_matricula" Type="date" Nullable="false" />
+    <Property Name="prom_ua" Type="int" />
+    <Property Name="prom_ep" Type="int" />
+    <Property Name="exa_parc" Type="int" />
+    <Property Name="exa_fin" Type="int" />
+    <Property Name="nota_fin" Type="int" />
+    <Property Name="cant_inasist" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Facultad">
+    <Key>
+      <PropertyRef Name="id_facultad" />
+    </Key>
+    <Property Name="id_facultad" Type="int" Nullable="false" />
+    <Property Name="desc_facultad" Type="varchar" MaxLength="300" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Laboratorio">
+    <Key>
+      <PropertyRef Name="id_laboratorio" />
+    </Key>
+    <Property Name="id_laboratorio" Type="int" Nullable="false" />
+    <Property Name="id_sede" Type="int" />
+    <Property Name="bloque_lab" Type="char" MaxLength="1" />
+    <Property Name="num_lab" Type="int" Nullable="false" />
+    <Property Name="aforo_lab" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Profesor">
+    <Key>
+      <PropertyRef Name="id_profesor" />
+    </Key>
+    <Property Name="id_profesor" Type="int" Nullable="false" />
+    <Property Name="nomb_profesor" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ape_profesor" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="ubi_profesor" Type="char" MaxLength="6" />
+    <Property Name="tel_profesor" Type="char" MaxLength="9" />
+    <Property Name="email_profesor" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Registro_Usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+      <PropertyRef Name="fec_ingreso" />
+    </Key>
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="fec_ingreso" Type="datetime" Nullable="false" />
+    <Property Name="fec_salida" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Rol">
+    <Key>
+      <PropertyRef Name="id_rol" />
+    </Key>
+    <Property Name="id_rol" Type="int" Nullable="false" />
+    <Property Name="nomb_rol" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="desc_rol" Type="varchar" MaxLength="625" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Sede">
+    <Key>
+      <PropertyRef Name="id_sede" />
+    </Key>
+    <Property Name="id_sede" Type="int" Nullable="false" />
+    <Property Name="ubi_sede" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Seleccion_Act_Extra">
+    <Key>
+      <PropertyRef Name="id_actividad_ext" />
+      <PropertyRef Name="id_alumno" />
+    </Key>
+    <Property Name="id_actividad_ext" Type="int" Nullable="false" />
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="fec_ini" Type="date" Nullable="false" />
+    <Property Name="fec_fin" Type="date" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Tipo_Nota">
+    <Key>
+      <PropertyRef Name="id_tipo_nota" />
+    </Key>
+    <Property Name="id_tipo_nota" Type="int" Nullable="false" />
+    <Property Name="tipo_nota" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="peso" Type="float" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="id_rol" Type="int" Nullable="false" />
+    <Property Name="nick_usuario" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="pass_usuario" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Tb_Activi__id_ac__6477ECF3">
+    <End Role="Tb_Actividad" Type="Self.Tb_Actividad" Multiplicity="1" />
+    <End Role="Tb_Actividad_Asignada" Type="Self.Tb_Actividad_Asignada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Actividad">
+        <PropertyRef Name="id_actividad" />
+      </Principal>
+      <Dependent Role="Tb_Actividad_Asignada">
+        <PropertyRef Name="id_actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Activi__id_al__656C112C">
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="1" />
+    <End Role="Tb_Actividad_Asignada" Type="Self.Tb_Actividad_Asignada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Alumno">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Tb_Actividad_Asignada">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Activi__id_cu__66603565">
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="1" />
+    <End Role="Tb_Actividad_Asignada" Type="Self.Tb_Actividad_Asignada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_curso_prog" />
+      </Principal>
+      <Dependent Role="Tb_Actividad_Asignada">
+        <PropertyRef Name="id_curso_prog" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Activi__id_ti__6754599E">
+    <End Role="Tb_Tipo_Nota" Type="Self.Tb_Tipo_Nota" Multiplicity="0..1" />
+    <End Role="Tb_Actividad_Asignada" Type="Self.Tb_Actividad_Asignada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Nota">
+        <PropertyRef Name="id_tipo_nota" />
+      </Principal>
+      <Dependent Role="Tb_Actividad_Asignada">
+        <PropertyRef Name="id_tipo_nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Alumno__id_co__5165187F">
+    <End Role="Tb_Consejero" Type="Self.Tb_Consejero" Multiplicity="0..1" />
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Consejero">
+        <PropertyRef Name="id_consejero" />
+      </Principal>
+      <Dependent Role="Tb_Alumno">
+        <PropertyRef Name="id_consejero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Carrer__id_co__46E78A0C">
+    <End Role="Tb_Coordinador" Type="Self.Tb_Coordinador" Multiplicity="1" />
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Coordinador">
+        <PropertyRef Name="id_coordinador" />
+      </Principal>
+      <Dependent Role="Tb_Carrera">
+        <PropertyRef Name="id_coordinador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Carrer__id_fa__47DBAE45">
+    <End Role="Tb_Facultad" Type="Self.Tb_Facultad" Multiplicity="1" />
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Facultad">
+        <PropertyRef Name="id_facultad" />
+      </Principal>
+      <Dependent Role="Tb_Carrera">
+        <PropertyRef Name="id_facultad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Consej__id_se__4AB81AF0">
+    <End Role="Tb_Sede" Type="Self.Tb_Sede" Multiplicity="1" />
+    <End Role="Tb_Consejero" Type="Self.Tb_Consejero" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sede">
+        <PropertyRef Name="id_sede" />
+      </Principal>
+      <Dependent Role="Tb_Consejero">
+        <PropertyRef Name="id_sede" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso___id_ci__59FA5E80">
+    <End Role="Tb_Ciclo" Type="Self.Tb_Ciclo" Multiplicity="1" />
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Ciclo">
+        <PropertyRef Name="id_ciclo" />
+      </Principal>
+      <Dependent Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_ciclo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso___id_cu__5812160E">
+    <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="1" />
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Curso">
+        <PropertyRef Name="id_curso" />
+      </Principal>
+      <Dependent Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso___id_la__571DF1D5">
+    <End Role="Tb_Laboratorio" Type="Self.Tb_Laboratorio" Multiplicity="0..1" />
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Laboratorio">
+        <PropertyRef Name="id_laboratorio" />
+      </Principal>
+      <Dependent Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_laboratorio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso___id_pr__59063A47">
+    <End Role="Tb_Profesor" Type="Self.Tb_Profesor" Multiplicity="1" />
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Profesor">
+        <PropertyRef Name="id_profesor" />
+      </Principal>
+      <Dependent Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_profesor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso__id_car__4D94879B">
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="0..1" />
+    <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Carrera">
+        <PropertyRef Name="id_carrera" />
+      </Principal>
+      <Dependent Role="Tb_Curso">
+        <PropertyRef Name="id_carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Curso__id_pre__4E88ABD4">
+    <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="0..1" />
+    <End Role="Tb_Curso1" Type="Self.Tb_Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Curso">
+        <PropertyRef Name="id_curso" />
+      </Principal>
+      <Dependent Role="Tb_Curso1">
+        <PropertyRef Name="id_pre_req_curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Estudi__id_al__5CD6CB2B">
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="1" />
+    <End Role="Tb_Estudio" Type="Self.Tb_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Alumno">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Tb_Estudio">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Estudi__id_cu__5DCAEF64">
+    <End Role="Tb_Curso_Programado" Type="Self.Tb_Curso_Programado" Multiplicity="1" />
+    <End Role="Tb_Estudio" Type="Self.Tb_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Curso_Programado">
+        <PropertyRef Name="id_curso_prog" />
+      </Principal>
+      <Dependent Role="Tb_Estudio">
+        <PropertyRef Name="id_curso_prog" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Labora__id_se__5441852A">
+    <End Role="Tb_Sede" Type="Self.Tb_Sede" Multiplicity="0..1" />
+    <End Role="Tb_Laboratorio" Type="Self.Tb_Laboratorio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sede">
+        <PropertyRef Name="id_sede" />
+      </Principal>
+      <Dependent Role="Tb_Laboratorio">
+        <PropertyRef Name="id_sede" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Regist__id_us__6EF57B66">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="1" />
+    <End Role="Tb_Registro_Usuario" Type="Self.Tb_Registro_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="Tb_Registro_Usuario">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Selecc__id_ac__60A75C0F">
+    <End Role="Tb_Actividad_Extra" Type="Self.Tb_Actividad_Extra" Multiplicity="1" />
+    <End Role="Tb_Seleccion_Act_Extra" Type="Self.Tb_Seleccion_Act_Extra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Actividad_Extra">
+        <PropertyRef Name="id_actividad_ext" />
+      </Principal>
+      <Dependent Role="Tb_Seleccion_Act_Extra">
+        <PropertyRef Name="id_actividad_ext" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Selecc__id_al__619B8048">
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="1" />
+    <End Role="Tb_Seleccion_Act_Extra" Type="Self.Tb_Seleccion_Act_Extra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Alumno">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Tb_Seleccion_Act_Extra">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Usuari__id_ro__6C190EBB">
+    <End Role="Tb_Rol" Type="Self.Tb_Rol" Multiplicity="1" />
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="Tb_Usuario">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_AlumnoNotasDni" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vdni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_AlumnoOcurrencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vdni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_AlumnoPorcInasistDni" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vdni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_AlumnoPromedioCursoDni" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vdni" Type="char" Mode="In" />
+  </Function>
+  <EntityContainer Name="CandidatosIsilModelStoreContainer">
+    <EntitySet Name="Tb_Actividad" EntityType="Self.Tb_Actividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Actividad_Asignada" EntityType="Self.Tb_Actividad_Asignada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Actividad_Extra" EntityType="Self.Tb_Actividad_Extra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Alumno" EntityType="Self.Tb_Alumno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Ciclo" EntityType="Self.Tb_Ciclo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Consejero" EntityType="Self.Tb_Consejero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Coordinador" EntityType="Self.Tb_Coordinador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Curso" EntityType="Self.Tb_Curso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Curso_Programado" EntityType="Self.Tb_Curso_Programado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Estudio" EntityType="Self.Tb_Estudio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Facultad" EntityType="Self.Tb_Facultad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Laboratorio" EntityType="Self.Tb_Laboratorio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Profesor" EntityType="Self.Tb_Profesor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Registro_Usuario" EntityType="Self.Tb_Registro_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Rol" EntityType="Self.Tb_Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Sede" EntityType="Self.Tb_Sede" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Seleccion_Act_Extra" EntityType="Self.Tb_Seleccion_Act_Extra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Tipo_Nota" EntityType="Self.Tb_Tipo_Nota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tb_Activi__id_ac__6477ECF3" Association="Self.FK__Tb_Activi__id_ac__6477ECF3">
+      <End Role="Tb_Actividad" EntitySet="Tb_Actividad" />
+      <End Role="Tb_Actividad_Asignada" EntitySet="Tb_Actividad_Asignada" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Activi__id_al__656C112C" Association="Self.FK__Tb_Activi__id_al__656C112C">
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+      <End Role="Tb_Actividad_Asignada" EntitySet="Tb_Actividad_Asignada" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Activi__id_cu__66603565" Association="Self.FK__Tb_Activi__id_cu__66603565">
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+      <End Role="Tb_Actividad_Asignada" EntitySet="Tb_Actividad_Asignada" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Activi__id_ti__6754599E" Association="Self.FK__Tb_Activi__id_ti__6754599E">
+      <End Role="Tb_Tipo_Nota" EntitySet="Tb_Tipo_Nota" />
+      <End Role="Tb_Actividad_Asignada" EntitySet="Tb_Actividad_Asignada" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Alumno__id_co__5165187F" Association="Self.FK__Tb_Alumno__id_co__5165187F">
+      <End Role="Tb_Consejero" EntitySet="Tb_Consejero" />
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Carrer__id_co__46E78A0C" Association="Self.FK__Tb_Carrer__id_co__46E78A0C">
+      <End Role="Tb_Coordinador" EntitySet="Tb_Coordinador" />
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Carrer__id_fa__47DBAE45" Association="Self.FK__Tb_Carrer__id_fa__47DBAE45">
+      <End Role="Tb_Facultad" EntitySet="Tb_Facultad" />
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Consej__id_se__4AB81AF0" Association="Self.FK__Tb_Consej__id_se__4AB81AF0">
+      <End Role="Tb_Sede" EntitySet="Tb_Sede" />
+      <End Role="Tb_Consejero" EntitySet="Tb_Consejero" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso___id_ci__59FA5E80" Association="Self.FK__Tb_Curso___id_ci__59FA5E80">
+      <End Role="Tb_Ciclo" EntitySet="Tb_Ciclo" />
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso___id_cu__5812160E" Association="Self.FK__Tb_Curso___id_cu__5812160E">
+      <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso___id_la__571DF1D5" Association="Self.FK__Tb_Curso___id_la__571DF1D5">
+      <End Role="Tb_Laboratorio" EntitySet="Tb_Laboratorio" />
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso___id_pr__59063A47" Association="Self.FK__Tb_Curso___id_pr__59063A47">
+      <End Role="Tb_Profesor" EntitySet="Tb_Profesor" />
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso__id_car__4D94879B" Association="Self.FK__Tb_Curso__id_car__4D94879B">
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+      <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Curso__id_pre__4E88ABD4" Association="Self.FK__Tb_Curso__id_pre__4E88ABD4">
+      <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+      <End Role="Tb_Curso1" EntitySet="Tb_Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Estudi__id_al__5CD6CB2B" Association="Self.FK__Tb_Estudi__id_al__5CD6CB2B">
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+      <End Role="Tb_Estudio" EntitySet="Tb_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Estudi__id_cu__5DCAEF64" Association="Self.FK__Tb_Estudi__id_cu__5DCAEF64">
+      <End Role="Tb_Curso_Programado" EntitySet="Tb_Curso_Programado" />
+      <End Role="Tb_Estudio" EntitySet="Tb_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Labora__id_se__5441852A" Association="Self.FK__Tb_Labora__id_se__5441852A">
+      <End Role="Tb_Sede" EntitySet="Tb_Sede" />
+      <End Role="Tb_Laboratorio" EntitySet="Tb_Laboratorio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Regist__id_us__6EF57B66" Association="Self.FK__Tb_Regist__id_us__6EF57B66">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_Registro_Usuario" EntitySet="Tb_Registro_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Selecc__id_ac__60A75C0F" Association="Self.FK__Tb_Selecc__id_ac__60A75C0F">
+      <End Role="Tb_Actividad_Extra" EntitySet="Tb_Actividad_Extra" />
+      <End Role="Tb_Seleccion_Act_Extra" EntitySet="Tb_Seleccion_Act_Extra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Selecc__id_al__619B8048" Association="Self.FK__Tb_Selecc__id_al__619B8048">
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+      <End Role="Tb_Seleccion_Act_Extra" EntitySet="Tb_Seleccion_Act_Extra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Usuari__id_ro__6C190EBB" Association="Self.FK__Tb_Usuari__id_ro__6C190EBB">
+      <End Role="Tb_Rol" EntitySet="Tb_Rol" />
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
