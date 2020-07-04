@@ -42,13 +42,13 @@
             <asp:Button ID="btnConsultaDNI" runat="server" Text="DNI" OnClientClick="window.open('Consultas/ByDNI.aspx', '_self');return false;" />
         </td>
         <td class="auto-style4">
-            <asp:Button ID="btnTelefono" runat="server" Text="Teléfono" />
+            <asp:Button ID="btnTelefono" runat="server" Text="Teléfono" OnClientClick="window.open('Consultas/ByTelefono.aspx', '_self');return false;"/>
         </td>
         <td class="center">
-            <asp:Button ID="btnCorreo" runat="server" Text="Correo" />
+            <asp:Button ID="btnCorreo" runat="server" Text="Correo" OnClientClick="window.open('Consultas/ByCorreo.aspx', '_self');return false;"/>
         </td>
         <td class="center">
-            <asp:Button ID="btnNomApe" runat="server" Text="Nombre y apellido" />
+            <asp:Button ID="btnNomApe" runat="server" Text="Nombre y apellido" OnClientClick="window.open('Consultas/ByNomApe.aspx', '_self');return false;"/>
         </td>
     </tr>
 </table>

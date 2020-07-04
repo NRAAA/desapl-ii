@@ -111,7 +111,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Consultas\ByCorreo.aspx" />
     <Content Include="Consultas\ByDNI.aspx" />
+    <Content Include="Consultas\ByNomApe.aspx" />
+    <Content Include="Consultas\ByTelefono.aspx" />
     <Content Include="CSS\DemoCSS.css" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1.jpg" />
@@ -190,12 +193,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ByCorreo.aspx.cs">
+      <DependentUpon>ByCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ByCorreo.aspx.designer.cs">
+      <DependentUpon>ByCorreo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ByDNI.aspx.cs">
       <DependentUpon>ByDNI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Consultas\ByDNI.aspx.designer.cs">
       <DependentUpon>ByDNI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ByNomApe.aspx.cs">
+      <DependentUpon>ByNomApe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ByNomApe.aspx.designer.cs">
+      <DependentUpon>ByNomApe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ByTelefono.aspx.cs">
+      <DependentUpon>ByTelefono.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ByTelefono.aspx.designer.cs">
+      <DependentUpon>ByTelefono.aspx</DependentUpon>
     </Compile>
     <Compile Include="DemoMaster.master.cs">
       <DependentUpon>DemoMaster.master</DependentUpon>
