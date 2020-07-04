@@ -21,6 +21,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AlumnoCursoBE" nillable="true" type="tns:AlumnoCursoBE" />
+  <xs:complexType name="ArrayOfAlumnoPorcInasistenciaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlumnoPorcInasistenciaBE" nillable="true" type="tns:AlumnoPorcInasistenciaBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlumnoPorcInasistenciaBE" nillable="true" type="tns:ArrayOfAlumnoPorcInasistenciaBE" />
   <xs:complexType name="AlumnoPorcInasistenciaBE">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApeAlumno" nillable="true" type="xs:string" />
@@ -29,6 +35,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AlumnoPorcInasistenciaBE" nillable="true" type="tns:AlumnoPorcInasistenciaBE" />
+  <xs:complexType name="ArrayOfAlumnoCursoPromBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlumnoCursoPromBE" nillable="true" type="tns:AlumnoCursoPromBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlumnoCursoPromBE" nillable="true" type="tns:ArrayOfAlumnoCursoPromBE" />
   <xs:complexType name="AlumnoCursoPromBE">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApeAlumno" nillable="true" type="xs:string" />

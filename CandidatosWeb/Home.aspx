@@ -52,4 +52,12 @@
         </td>
     </tr>
 </table>
+
+    <p class="center">
+        &nbsp;</p>
+    <p class="center">
+        Si ya conoces el DNI, mira su historial directamente:</p>
+    <p class="center">
+        <asp:Button ID="btnHistorial" runat="server" Text="Ver historial" OnClientClick="window.open('Historial/HistorialAcademico.aspx', '_self');return false;"/>
+    </p>
 </asp:Content>

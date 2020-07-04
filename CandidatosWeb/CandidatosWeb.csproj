@@ -105,6 +105,16 @@
     <Content Include="Connected Services\ServiceUbigeo\CandidatosWeb.ServiceUbigeo.Provincia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServiceEstudio\CandidatosWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstudio\service.wsdl" />
+    <None Include="Connected Services\ServiceEstudio\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceEstudio\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceUbigeo\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceUbigeo\configuration.svcinfo" />
     <None Include="Connected Services\ServiceUbigeo\Reference.svcmap">
@@ -116,6 +126,7 @@
     <Content Include="Consultas\ByNomApe.aspx" />
     <Content Include="Consultas\ByTelefono.aspx" />
     <Content Include="CSS\DemoCSS.css" />
+    <Content Include="Historial\HistorialAcademico.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
@@ -225,6 +236,13 @@
       <DependentUpon>DemoMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Historial\HistorialAcademico.aspx.cs">
+      <DependentUpon>HistorialAcademico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historial\HistorialAcademico.aspx.designer.cs">
+      <DependentUpon>HistorialAcademico.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,16 +262,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceAlumno\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstudio\CandidatosWCF.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstudio\service.wsdl" />
-    <None Include="Connected Services\ServiceEstudio\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceEstudio\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceUbigeo\CandidatosWCF.xsd">

@@ -480,17 +480,17 @@ namespace CandidatosWeb.ServiceEstudio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioEstudio/ConsultarPorcentajeInasistenciaAlumno", ReplyAction="http://tempuri.org/IServicioEstudio/ConsultarPorcentajeInasistenciaAlumnoResponse" +
             "")]
-        CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE ConsultarPorcentajeInasistenciaAlumno(string mvarDni);
+        CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE[] ConsultarPorcentajeInasistenciaAlumno(string mvarDni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioEstudio/ConsultarPorcentajeInasistenciaAlumno", ReplyAction="http://tempuri.org/IServicioEstudio/ConsultarPorcentajeInasistenciaAlumnoResponse" +
             "")]
-        System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE> ConsultarPorcentajeInasistenciaAlumnoAsync(string mvarDni);
+        System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE[]> ConsultarPorcentajeInasistenciaAlumnoAsync(string mvarDni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioEstudio/ConsultarPromedioPorCursoAlumno", ReplyAction="http://tempuri.org/IServicioEstudio/ConsultarPromedioPorCursoAlumnoResponse")]
-        CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE ConsultarPromedioPorCursoAlumno(string mvarDni);
+        CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE[] ConsultarPromedioPorCursoAlumno(string mvarDni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioEstudio/ConsultarPromedioPorCursoAlumno", ReplyAction="http://tempuri.org/IServicioEstudio/ConsultarPromedioPorCursoAlumnoResponse")]
-        System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE> ConsultarPromedioPorCursoAlumnoAsync(string mvarDni);
+        System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE[]> ConsultarPromedioPorCursoAlumnoAsync(string mvarDni);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -528,19 +528,19 @@ namespace CandidatosWeb.ServiceEstudio {
             return base.Channel.ConsultarNotasAlumnoAsync(mvarDni);
         }
         
-        public CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE ConsultarPorcentajeInasistenciaAlumno(string mvarDni) {
+        public CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE[] ConsultarPorcentajeInasistenciaAlumno(string mvarDni) {
             return base.Channel.ConsultarPorcentajeInasistenciaAlumno(mvarDni);
         }
         
-        public System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE> ConsultarPorcentajeInasistenciaAlumnoAsync(string mvarDni) {
+        public System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE[]> ConsultarPorcentajeInasistenciaAlumnoAsync(string mvarDni) {
             return base.Channel.ConsultarPorcentajeInasistenciaAlumnoAsync(mvarDni);
         }
         
-        public CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE ConsultarPromedioPorCursoAlumno(string mvarDni) {
+        public CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE[] ConsultarPromedioPorCursoAlumno(string mvarDni) {
             return base.Channel.ConsultarPromedioPorCursoAlumno(mvarDni);
         }
         
-        public System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE> ConsultarPromedioPorCursoAlumnoAsync(string mvarDni) {
+        public System.Threading.Tasks.Task<CandidatosWeb.ServiceEstudio.AlumnoCursoPromBE[]> ConsultarPromedioPorCursoAlumnoAsync(string mvarDni) {
             return base.Channel.ConsultarPromedioPorCursoAlumnoAsync(mvarDni);
         }
     }

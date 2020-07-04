@@ -57,10 +57,11 @@ namespace CandidatosWCF
             }
         }
 
-        public AlumnoPorcInasistenciaBE ConsultarPorcentajeInasistenciaAlumno(String mvarDni)
+        public List<AlumnoPorcInasistenciaBE> ConsultarPorcentajeInasistenciaAlumno(String mvarDni)
         {
             try
             {
+                List<AlumnoPorcInasistenciaBE> objListaInasistencias = new List<AlumnoPorcInasistenciaBE>();
                 String mvarDniSeguro;
 
                 if (mvarDni != "" && mvarDni != null)
@@ -72,17 +73,20 @@ namespace CandidatosWCF
                     throw new FaultException("Debes consultar un DNI");
                 }
 
-                AlumnoPorcInasistenciaBE objAlumnoPorcInasistenciaBE = new AlumnoPorcInasistenciaBE();
+                
 
                 var query = candidatosIsilEntities.usp_AlumnoPorcInasistDni(mvarDniSeguro);
 
                 foreach(var res in query)
                 {
+                    AlumnoPorcInasistenciaBE objAlumnoPorcInasistenciaBE = new AlumnoPorcInasistenciaBE();
                     objAlumnoPorcInasistenciaBE.ApeAlumno = res.ape_alumno;
                     objAlumnoPorcInasistenciaBE.NombAlumno = res.nomb_alumno;
                     objAlumnoPorcInasistenciaBE.PorcInasist = res.porc_inasist;
+
+                    objListaInasistencias.Add(objAlumnoPorcInasistenciaBE);
                 }
-                return objAlumnoPorcInasistenciaBE;
+                return objListaInasistencias;
 
             } catch (Exception ex)
             {
@@ -90,11 +94,12 @@ namespace CandidatosWCF
             }
         }
 
-        public AlumnoCursoPromBE ConsultarPromedioPorCursoAlumno(String mvarDni)
+        public List<AlumnoCursoPromBE> ConsultarPromedioPorCursoAlumno(String mvarDni)
         {
             try
             {
                 String mvarDniSeguro;
+                List<AlumnoCursoPromBE> objListaCursos= new List<AlumnoCursoPromBE>();
 
                 if (mvarDni != "" && mvarDni != null)
                 {
@@ -105,12 +110,13 @@ namespace CandidatosWCF
                     throw new FaultException("Debes consultar un DNI");
                 }
 
-                AlumnoCursoPromBE objAlumnoCursoPromBE = new AlumnoCursoPromBE();
+                
 
                 var query = candidatosIsilEntities.usp_AlumnoPromedioCursoDni(mvarDniSeguro);
 
                 foreach(var res in query)
                 {
+                    AlumnoCursoPromBE objAlumnoCursoPromBE = new AlumnoCursoPromBE();
                     objAlumnoCursoPromBE.ApeAlumno = res.ape_alumno;
                     objAlumnoCursoPromBE.CantClases = Convert.ToInt16(res.cant_clases);
                     objAlumnoCursoPromBE.CantInasist = Convert.ToInt16(res.cant_inasist);
@@ -121,8 +127,9 @@ namespace CandidatosWCF
                     objAlumnoCursoPromBE.Profesor = res.profesor;
                     objAlumnoCursoPromBE.PromEp = Convert.ToInt16(res.prom_ep);
                     objAlumnoCursoPromBE.PromUa = Convert.ToInt16(res.prom_ua);
+                    objListaCursos.Add(objAlumnoCursoPromBE);
                 }
-                return objAlumnoCursoPromBE;
+                return objListaCursos;
 
             } catch(Exception ex)
             {

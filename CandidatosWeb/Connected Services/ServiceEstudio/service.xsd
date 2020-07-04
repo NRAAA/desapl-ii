@@ -25,7 +25,7 @@
   <xs:element name="ConsultarPorcentajeInasistenciaAlumnoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CandidatosWCF" minOccurs="0" name="ConsultarPorcentajeInasistenciaAlumnoResult" nillable="true" type="q2:AlumnoPorcInasistenciaBE" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CandidatosWCF" minOccurs="0" name="ConsultarPorcentajeInasistenciaAlumnoResult" nillable="true" type="q2:ArrayOfAlumnoPorcInasistenciaBE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -39,7 +39,7 @@
   <xs:element name="ConsultarPromedioPorCursoAlumnoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CandidatosWCF" minOccurs="0" name="ConsultarPromedioPorCursoAlumnoResult" nillable="true" type="q3:AlumnoCursoPromBE" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CandidatosWCF" minOccurs="0" name="ConsultarPromedioPorCursoAlumnoResult" nillable="true" type="q3:ArrayOfAlumnoCursoPromBE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -17,10 +17,10 @@ namespace CandidatosWCF
         List<AlumnoCursoBE> ConsultarNotasAlumno(String mvarDni);
 
         [OperationContract]
-        AlumnoPorcInasistenciaBE ConsultarPorcentajeInasistenciaAlumno(String mvarDni);
+        List<AlumnoPorcInasistenciaBE> ConsultarPorcentajeInasistenciaAlumno(String mvarDni);
 
         [OperationContract]
-        AlumnoCursoPromBE ConsultarPromedioPorCursoAlumno(String mvarDni);
+        List<AlumnoCursoPromBE> ConsultarPromedioPorCursoAlumno(String mvarDni);
 
     }
 

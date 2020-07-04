@@ -7,72 +7,63 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace CandidatosWeb {
+namespace CandidatosWeb.Historial {
     
     
-    public partial class Home {
+    public partial class Historial_académico {
         
         /// <summary>
-        /// Control btnTop5.
+        /// Control tbDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTop5;
+        protected global::System.Web.UI.WebControls.TextBox tbDNI;
         
         /// <summary>
-        /// Control gvTop5.
+        /// Control btnConsultar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvTop5;
+        protected global::System.Web.UI.WebControls.Button btnConsultar;
         
         /// <summary>
-        /// Control btnConsultaDNI.
+        /// Control gvAlumno.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsultaDNI;
+        protected global::System.Web.UI.WebControls.GridView gvAlumno;
         
         /// <summary>
-        /// Control btnTelefono.
+        /// Control gvPromedioCurso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTelefono;
+        protected global::System.Web.UI.WebControls.GridView gvPromedioCurso;
         
         /// <summary>
-        /// Control btnCorreo.
+        /// Control gvPorcInas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCorreo;
+        protected global::System.Web.UI.WebControls.GridView gvPorcInas;
         
         /// <summary>
-        /// Control btnNomApe.
+        /// Control gvNotas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNomApe;
-        
-        /// <summary>
-        /// Control btnHistorial.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnHistorial;
+        protected global::System.Web.UI.WebControls.GridView gvNotas;
     }
 }
