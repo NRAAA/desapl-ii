@@ -6,8 +6,8 @@ using System.ServiceModel;
 using System.Text;
 
 //Created by Flavia Figueroa
-
-namespace CandidatosWCF
+ 
+namespace CandidatosWCF 
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IServicioAlumno" en el código y en el archivo de configuración a la vez.
     [ServiceContract]

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CandidatosWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CandidatosWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAlumnoCursoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlumnoCursoBE" nillable="true" type="tns:AlumnoCursoBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlumnoCursoBE" nillable="true" type="tns:ArrayOfAlumnoCursoBE" />
+  <xs:complexType name="AlumnoCursoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApeAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComentariosProfesor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Curso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescAct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" type="xs:short" />
+      <xs:element minOccurs="0" name="Profesor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemaAct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoNota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TituloAct" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlumnoCursoBE" nillable="true" type="tns:AlumnoCursoBE" />
+  <xs:complexType name="AlumnoPorcInasistenciaBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApeAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PorcInasist" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlumnoPorcInasistenciaBE" nillable="true" type="tns:AlumnoPorcInasistenciaBE" />
+  <xs:complexType name="AlumnoCursoPromBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApeAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CantClases" type="xs:short" />
+      <xs:element minOccurs="0" name="CantInasist" type="xs:short" />
+      <xs:element minOccurs="0" name="Curso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExaFin" type="xs:short" />
+      <xs:element minOccurs="0" name="ExaParc" type="xs:short" />
+      <xs:element minOccurs="0" name="NombAlumno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profesor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromEp" type="xs:short" />
+      <xs:element minOccurs="0" name="PromUa" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlumnoCursoPromBE" nillable="true" type="tns:AlumnoCursoPromBE" />
+</xs:schema>

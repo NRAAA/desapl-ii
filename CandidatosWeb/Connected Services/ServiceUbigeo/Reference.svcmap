@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f4fcab7-ac97-45b0-bfa3-0e19c142b289" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioUbigeo/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f51e10ed-5238-48d7-861b-ebb8948d74fd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioUbigeo/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a5d7769e-f1a3-469f-8917-346c16534a3b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioUbigeo/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="94de8e7e-8779-4c71-86d3-94e4e5f3f4fa" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioUbigeo/mex" />
+    <MetadataFile FileName="CandidatosWCF.xsd" MetadataType="Schema" ID="8353ed8a-b8d5-4779-8be7-3dc32fcb8b88" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioUbigeo/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

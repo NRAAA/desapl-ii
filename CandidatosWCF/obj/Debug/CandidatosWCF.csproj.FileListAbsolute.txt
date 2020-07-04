@@ -34,3 +34,15 @@ C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avan
 C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.xml
 C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nicolas\[ISIL]\5-CICLO\APLII\S13\Avance 3\Avance2_FigueroaCastillo\Avance2_Figueroa_y_Rojas\Avance2_Figueroa_y_Rojas\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.dll.config
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.pdb
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.dll
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.xml
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csprojAssemblyReference.cache
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompileInputs.cache
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.pdb
