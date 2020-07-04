@@ -159,6 +159,16 @@
     <Property Name="aforo_lab" Type="int" Nullable="false" />
     <Property Name="status" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Tb_Ocurrencias">
+    <Key>
+      <PropertyRef Name="id_ocurrencia" />
+    </Key>
+    <Property Name="id_ocurrencia" Type="int" Nullable="false" />
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="625" Nullable="false" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="status" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="Tb_Profesor">
     <Key>
       <PropertyRef Name="id_profesor" />
@@ -431,6 +441,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Tb_Ocurre__id_al__06CD04F7">
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="1" />
+    <End Role="Tb_Ocurrencias" Type="Self.Tb_Ocurrencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Alumno">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Tb_Ocurrencias">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Tb_Regist__id_us__6EF57B66">
     <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="1" />
     <End Role="Tb_Registro_Usuario" Type="Self.Tb_Registro_Usuario" Multiplicity="*" />
@@ -505,6 +527,7 @@
     <EntitySet Name="Tb_Estudio" EntityType="Self.Tb_Estudio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Facultad" EntityType="Self.Tb_Facultad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Laboratorio" EntityType="Self.Tb_Laboratorio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Ocurrencias" EntityType="Self.Tb_Ocurrencias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Profesor" EntityType="Self.Tb_Profesor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Registro_Usuario" EntityType="Self.Tb_Registro_Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Rol" EntityType="Self.Tb_Rol" Schema="dbo" store:Type="Tables" />
@@ -579,6 +602,10 @@
     <AssociationSet Name="FK__Tb_Labora__id_se__5441852A" Association="Self.FK__Tb_Labora__id_se__5441852A">
       <End Role="Tb_Sede" EntitySet="Tb_Sede" />
       <End Role="Tb_Laboratorio" EntitySet="Tb_Laboratorio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Ocurre__id_al__06CD04F7" Association="Self.FK__Tb_Ocurre__id_al__06CD04F7">
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+      <End Role="Tb_Ocurrencias" EntitySet="Tb_Ocurrencias" />
     </AssociationSet>
     <AssociationSet Name="FK__Tb_Regist__id_us__6EF57B66" Association="Self.FK__Tb_Regist__id_us__6EF57B66">
       <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />

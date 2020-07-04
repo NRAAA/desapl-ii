@@ -15,11 +15,13 @@ namespace CandidatosWCF
         CandidatosIsilEntities candidatosIsilEntities = new CandidatosIsilEntities();
         
 
-        public AlumnoBE ConsultarAlumnoPorDni(String mvarDni)
+        public List<AlumnoBE> ConsultarAlumnoPorDni(String mvarDni)
         {
             try
             {
                 String mvarDniSeguro;
+
+                List<AlumnoBE> objListaAlumnos = new List<AlumnoBE>();
 
                 if (mvarDni != "" && mvarDni != null)
                 {
@@ -30,7 +32,7 @@ namespace CandidatosWCF
                     throw new FaultException("Debes consultar un DNI");
                 }
 
-                AlumnoBE objAlumno = new AlumnoBE();
+                
                 var query = (from Alumno in candidatosIsilEntities.Tb_Alumno
                              where Alumno.dni_alumno.Equals(mvarDniSeguro) && Alumno.status.Equals(1)
                              select new
@@ -47,6 +49,7 @@ namespace CandidatosWCF
 
                 foreach(var res in query)
                 {
+                    AlumnoBE objAlumno = new AlumnoBE();
                     objAlumno.DniAlumno = res.dniAlumno;
                     objAlumno.NombAlumno = res.nombAlumno;
                     objAlumno.ApeAlumno = res.apeAlumno;
@@ -55,20 +58,23 @@ namespace CandidatosWCF
                     objAlumno.EmailAlumno = res.emailAlumno;
                     objAlumno.FecInscrip = res.fecInscrip;
                     objAlumno.PromGlobal = Convert.ToDouble(res.promGlobal);
+
+                    objListaAlumnos.Add(objAlumno);
                 }
-                return objAlumno;
+                return objListaAlumnos;
             } catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
-        public AlumnoBE ConsultarAlumnoPorTelefono(String mvarTelefono)
+        public List<AlumnoBE> ConsultarAlumnoPorTelefono(String mvarTelefono)
         {
 
             try
             {
                 String mvarTelefonoSeguro;
+                List<AlumnoBE> objListaAlumnos = new List<AlumnoBE>();
 
                 if (mvarTelefono != "" && mvarTelefono != null)
                 {
@@ -78,8 +84,7 @@ namespace CandidatosWCF
                 {
                     throw new FaultException("Debes consultar un teléfono");
                 }
-
-                AlumnoBE objAlumno = new AlumnoBE();
+                
                 var query = (from Alumno in candidatosIsilEntities.Tb_Alumno
                              where Alumno.tel_alumno.Equals(mvarTelefonoSeguro) && Alumno.status.Equals(1)
                              select new
@@ -96,6 +101,7 @@ namespace CandidatosWCF
 
                 foreach (var res in query)
                 {
+                    AlumnoBE objAlumno = new AlumnoBE();
                     objAlumno.DniAlumno = res.dniAlumno;
                     objAlumno.NombAlumno = res.nombAlumno;
                     objAlumno.ApeAlumno = res.apeAlumno;
@@ -104,8 +110,10 @@ namespace CandidatosWCF
                     objAlumno.EmailAlumno = res.emailAlumno;
                     objAlumno.FecInscrip = res.fecInscrip;
                     objAlumno.PromGlobal = Convert.ToDouble(res.promGlobal);
+
+                    objListaAlumnos.Add(objAlumno);
                 }
-                return objAlumno;
+                return objListaAlumnos;
             }
             catch (Exception ex)
             {
@@ -113,11 +121,13 @@ namespace CandidatosWCF
             }
         }
 
-        public AlumnoBE ConsultarAlumnoPorCorreo(String mvarCorreo)
+        public List<AlumnoBE> ConsultarAlumnoPorCorreo(String mvarCorreo)
         {
             try
             {
                 String mvarCorreoSeguro;
+
+                List<AlumnoBE> objListaAlumnos = new List<AlumnoBE>();
 
                 if (mvarCorreo != "" && mvarCorreo != null)
                 {
@@ -127,8 +137,7 @@ namespace CandidatosWCF
                 {
                     throw new FaultException("Debes consultar un correo");
                 }
-
-                AlumnoBE objAlumno = new AlumnoBE();
+                
                 var query = (from Alumno in candidatosIsilEntities.Tb_Alumno
                              where Alumno.email_alumno.Equals(mvarCorreoSeguro) && Alumno.status.Equals(1)
                              select new
@@ -145,6 +154,7 @@ namespace CandidatosWCF
 
                 foreach (var res in query)
                 {
+                    AlumnoBE objAlumno = new AlumnoBE();
                     objAlumno.DniAlumno = res.dniAlumno;
                     objAlumno.NombAlumno = res.nombAlumno;
                     objAlumno.ApeAlumno = res.apeAlumno;
@@ -153,8 +163,10 @@ namespace CandidatosWCF
                     objAlumno.EmailAlumno = res.emailAlumno;
                     objAlumno.FecInscrip = res.fecInscrip;
                     objAlumno.PromGlobal = Convert.ToDouble(res.promGlobal);
+
+                    objListaAlumnos.Add(objAlumno);
                 }
-                return objAlumno;
+                return objListaAlumnos;
             }
             catch (Exception ex)
             {

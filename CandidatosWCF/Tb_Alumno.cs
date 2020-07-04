@@ -19,6 +19,7 @@ namespace CandidatosWCF
         {
             this.Tb_Actividad_Asignada = new HashSet<Tb_Actividad_Asignada>();
             this.Tb_Estudio = new HashSet<Tb_Estudio>();
+            this.Tb_Ocurrencias = new HashSet<Tb_Ocurrencias>();
             this.Tb_Seleccion_Act_Extra = new HashSet<Tb_Seleccion_Act_Extra>();
         }
     
@@ -39,6 +40,8 @@ namespace CandidatosWCF
         public virtual Tb_Consejero Tb_Consejero { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_Estudio> Tb_Estudio { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tb_Ocurrencias> Tb_Ocurrencias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tb_Seleccion_Act_Extra> Tb_Seleccion_Act_Extra { get; set; }
     }

@@ -40,6 +40,7 @@ namespace CandidatosWCF
         public virtual DbSet<Tb_Estudio> Tb_Estudio { get; set; }
         public virtual DbSet<Tb_Facultad> Tb_Facultad { get; set; }
         public virtual DbSet<Tb_Laboratorio> Tb_Laboratorio { get; set; }
+        public virtual DbSet<Tb_Ocurrencias> Tb_Ocurrencias { get; set; }
         public virtual DbSet<Tb_Profesor> Tb_Profesor { get; set; }
         public virtual DbSet<Tb_Registro_Usuario> Tb_Registro_Usuario { get; set; }
         public virtual DbSet<Tb_Rol> Tb_Rol { get; set; }
@@ -55,6 +56,15 @@ namespace CandidatosWCF
                 new ObjectParameter("vdni", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_AlumnoNotasDni_Result>("usp_AlumnoNotasDni", vdniParameter);
+        }
+    
+        public virtual ObjectResult<usp_AlumnoOcurrencias_Result> usp_AlumnoOcurrencias(string vdni)
+        {
+            var vdniParameter = vdni != null ?
+                new ObjectParameter("vdni", vdni) :
+                new ObjectParameter("vdni", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_AlumnoOcurrencias_Result>("usp_AlumnoOcurrencias", vdniParameter);
         }
     
         public virtual ObjectResult<usp_AlumnoPorcInasistDni_Result> usp_AlumnoPorcInasistDni(string vdni)
@@ -73,15 +83,6 @@ namespace CandidatosWCF
                 new ObjectParameter("vdni", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_AlumnoPromedioCursoDni_Result>("usp_AlumnoPromedioCursoDni", vdniParameter);
-        }
-    
-        public virtual ObjectResult<usp_AlumnoOcurrencias_Result> usp_AlumnoOcurrencias(string vdni)
-        {
-            var vdniParameter = vdni != null ?
-                new ObjectParameter("vdni", vdni) :
-                new ObjectParameter("vdni", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_AlumnoOcurrencias_Result>("usp_AlumnoOcurrencias", vdniParameter);
         }
     }
 }

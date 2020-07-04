@@ -113,6 +113,9 @@
     <Compile Include="Tb_Laboratorio.cs">
       <DependentUpon>CandidatosIsil.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tb_Ocurrencias.cs">
+      <DependentUpon>CandidatosIsil.tt</DependentUpon>
+    </Compile>
     <Compile Include="Tb_Profesor.cs">
       <DependentUpon>CandidatosIsil.tt</DependentUpon>
     </Compile>
@@ -202,10 +205,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="CandidatosIsil.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CandidatosIsil.Context.cs</LastGenOutput>
       <DependentUpon>CandidatosIsil.edmx</DependentUpon>
+      <LastGenOutput>CandidatosIsil.Context.cs</LastGenOutput>
     </Content>
     <Content Include="CandidatosIsil.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -222,9 +228,6 @@
       <DependentUpon>Ubigeo.edmx</DependentUpon>
       <LastGenOutput>Ubigeo.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

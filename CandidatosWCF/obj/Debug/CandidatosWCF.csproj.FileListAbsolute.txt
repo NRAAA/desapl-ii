@@ -46,3 +46,15 @@ D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompil
 D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
 D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.dll
 D:\Flavia\Isil\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.pdb
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.dll.config
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\CandidatosWCF.pdb
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.xml
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csprojAssemblyReference.cache
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CoreCompileInputs.cache
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.csproj.CopyComplete
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.dll
+D:\Flavia\Isil\5to Ciclo\Desarrollo de Aplicaciones II\desapl-ii\CandidatosWCF\obj\Debug\CandidatosWCF.pdb

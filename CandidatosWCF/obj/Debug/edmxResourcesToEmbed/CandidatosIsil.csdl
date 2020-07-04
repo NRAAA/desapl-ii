@@ -60,6 +60,7 @@
     <NavigationProperty Name="Tb_Actividad_Asignada" Relationship="Self.FK__Tb_Activi__id_al__656C112C" FromRole="Tb_Alumno" ToRole="Tb_Actividad_Asignada" />
     <NavigationProperty Name="Tb_Consejero" Relationship="Self.FK__Tb_Alumno__id_co__5165187F" FromRole="Tb_Alumno" ToRole="Tb_Consejero" />
     <NavigationProperty Name="Tb_Estudio" Relationship="Self.FK__Tb_Estudi__id_al__5CD6CB2B" FromRole="Tb_Alumno" ToRole="Tb_Estudio" />
+    <NavigationProperty Name="Tb_Ocurrencias" Relationship="Self.FK__Tb_Ocurre__id_al__06CD04F7" FromRole="Tb_Alumno" ToRole="Tb_Ocurrencias" />
     <NavigationProperty Name="Tb_Seleccion_Act_Extra" Relationship="Self.FK__Tb_Selecc__id_al__619B8048" FromRole="Tb_Alumno" ToRole="Tb_Seleccion_Act_Extra" />
   </EntityType>
   <EntityType Name="Tb_Carrera">
@@ -190,6 +191,17 @@
     <Property Name="status" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Tb_Curso_Programado" Relationship="Self.FK__Tb_Curso___id_la__571DF1D5" FromRole="Tb_Laboratorio" ToRole="Tb_Curso_Programado" />
     <NavigationProperty Name="Tb_Sede" Relationship="Self.FK__Tb_Labora__id_se__5441852A" FromRole="Tb_Laboratorio" ToRole="Tb_Sede" />
+  </EntityType>
+  <EntityType Name="Tb_Ocurrencias">
+    <Key>
+      <PropertyRef Name="id_ocurrencia" />
+    </Key>
+    <Property Name="id_ocurrencia" Type="Int32" Nullable="false" />
+    <Property Name="id_alumno" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="625" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Alumno" Relationship="Self.FK__Tb_Ocurre__id_al__06CD04F7" FromRole="Tb_Ocurrencias" ToRole="Tb_Alumno" />
   </EntityType>
   <EntityType Name="Tb_Profesor">
     <Key>
@@ -349,6 +361,18 @@
         <PropertyRef Name="id_alumno" />
       </Principal>
       <Dependent Role="Tb_Estudio">
+        <PropertyRef Name="id_alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Ocurre__id_al__06CD04F7">
+    <End Role="Tb_Alumno" Type="Self.Tb_Alumno" Multiplicity="1" />
+    <End Role="Tb_Ocurrencias" Type="Self.Tb_Ocurrencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Alumno">
+        <PropertyRef Name="id_alumno" />
+      </Principal>
+      <Dependent Role="Tb_Ocurrencias">
         <PropertyRef Name="id_alumno" />
       </Dependent>
     </ReferentialConstraint>
@@ -535,6 +559,7 @@
     <EntitySet Name="Tb_Estudio" EntityType="Self.Tb_Estudio" />
     <EntitySet Name="Tb_Facultad" EntityType="Self.Tb_Facultad" />
     <EntitySet Name="Tb_Laboratorio" EntityType="Self.Tb_Laboratorio" />
+    <EntitySet Name="Tb_Ocurrencias" EntityType="Self.Tb_Ocurrencias" />
     <EntitySet Name="Tb_Profesor" EntityType="Self.Tb_Profesor" />
     <EntitySet Name="Tb_Registro_Usuario" EntityType="Self.Tb_Registro_Usuario" />
     <EntitySet Name="Tb_Rol" EntityType="Self.Tb_Rol" />
@@ -569,6 +594,10 @@
     <AssociationSet Name="FK__Tb_Estudi__id_al__5CD6CB2B" Association="Self.FK__Tb_Estudi__id_al__5CD6CB2B">
       <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
       <End Role="Tb_Estudio" EntitySet="Tb_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Ocurre__id_al__06CD04F7" Association="Self.FK__Tb_Ocurre__id_al__06CD04F7">
+      <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
+      <End Role="Tb_Ocurrencias" EntitySet="Tb_Ocurrencias" />
     </AssociationSet>
     <AssociationSet Name="FK__Tb_Selecc__id_al__619B8048" Association="Self.FK__Tb_Selecc__id_al__619B8048">
       <End Role="Tb_Alumno" EntitySet="Tb_Alumno" />
@@ -629,13 +658,13 @@
     <FunctionImport Name="usp_AlumnoNotasDni" ReturnType="Collection(CandidatosIsilModel.usp_AlumnoNotasDni_Result)">
       <Parameter Name="vdni" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_AlumnoOcurrencias" ReturnType="Collection(CandidatosIsilModel.usp_AlumnoOcurrencias_Result)">
+      <Parameter Name="vdni" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="usp_AlumnoPorcInasistDni" ReturnType="Collection(CandidatosIsilModel.usp_AlumnoPorcInasistDni_Result)">
       <Parameter Name="vdni" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_AlumnoPromedioCursoDni" ReturnType="Collection(CandidatosIsilModel.usp_AlumnoPromedioCursoDni_Result)">
-      <Parameter Name="vdni" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="usp_AlumnoOcurrencias" ReturnType="Collection(CandidatosIsilModel.usp_AlumnoOcurrencias_Result)">
       <Parameter Name="vdni" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
@@ -650,6 +679,12 @@
     <Property Type="String" Name="tipo_nota" Nullable="false" MaxLength="100" />
     <Property Type="String" Name="profesor" Nullable="false" MaxLength="401" />
     <Property Type="String" Name="comentarios_profesor" Nullable="true" MaxLength="625" />
+  </ComplexType>
+  <ComplexType Name="usp_AlumnoOcurrencias_Result">
+    <Property Type="String" Name="nomb_alumno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ape_alumno" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="ocurrencia" Nullable="false" MaxLength="625" />
+    <Property Type="DateTime" Name="ocu_fecha" Nullable="true" />
   </ComplexType>
   <ComplexType Name="usp_AlumnoPorcInasistDni_Result">
     <Property Type="String" Name="nomb_alumno" Nullable="false" MaxLength="100" />
@@ -667,11 +702,5 @@
     <Property Type="Int32" Name="exa_fin" Nullable="true" />
     <Property Type="Int32" Name="cant_inasist" Nullable="false" />
     <Property Type="Int32" Name="cant_clases" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="usp_AlumnoOcurrencias_Result">
-    <Property Type="String" Name="nomb_alumno" Nullable="false" MaxLength="100" />
-    <Property Type="String" Name="ape_alumno" Nullable="false" MaxLength="300" />
-    <Property Type="String" Name="ocurrencia" Nullable="false" MaxLength="625" />
-    <Property Type="DateTime" Name="ocu_fecha" Nullable="true" />
   </ComplexType>
 </Schema>

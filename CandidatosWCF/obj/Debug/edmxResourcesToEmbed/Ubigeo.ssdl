@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="UBIGEOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'UBIGEO.dbo.MAE_UBIGEO' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="MAE_UBIGEO">
+          <Property Name="IdDepa" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdProv" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdDist" Type="nvarchar" MaxLength="255" />
+          <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+          <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+          <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'UBIGEO.dbo.MAE_UBIGEO2' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="MAE_UBIGEO2">
+          <Property Name="IdContinente" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdPais" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdCiudad" Type="nvarchar" MaxLength="255" />
+          <Property Name="Continente" Type="nvarchar" MaxLength="255" />
+          <Property Name="Pais" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
   <Function Name="UBIGEO_CIUDADESPAIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdContinente" Type="char" Mode="In" />
     <Parameter Name="IdPais" Type="char" Mode="In" />

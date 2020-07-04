@@ -14,13 +14,13 @@ namespace CandidatosWCF
     public interface IServicioAlumno
     {
         [OperationContract]
-        AlumnoBE ConsultarAlumnoPorDni(String dni);
+        List<AlumnoBE> ConsultarAlumnoPorDni(String dni);
 
         [OperationContract]
-        AlumnoBE ConsultarAlumnoPorTelefono(String telefono);
+        List<AlumnoBE> ConsultarAlumnoPorTelefono(String telefono);
 
         [OperationContract]
-        AlumnoBE ConsultarAlumnoPorCorreo(String correo);
+        List<AlumnoBE> ConsultarAlumnoPorCorreo(String correo);
 
         [OperationContract]
         List<AlumnoBE> ConsultarAlumnoPorNombreApellido(String nombre, String apellido);

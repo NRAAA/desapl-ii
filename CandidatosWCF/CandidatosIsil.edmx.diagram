@@ -4,26 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1a13f5995ecd40aca423a36b7d44dd76" Name="Diagram1">
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad" Width="1.5" PointX="5.25" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad_Asignada" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad_Extra" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Alumno" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Carrera" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Ciclo" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Consejero" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Coordinador" Width="1.5" PointX="1.5" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Curso" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Curso_Programado" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Estudio" Width="1.5" PointX="10.5" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Facultad" Width="1.5" PointX="1.5" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Laboratorio" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Profesor" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
+      <Diagram DiagramId="89633032463c434bbdbbacb603bf6a0d" Name="Diagram1">
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad_Asignada" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Actividad_Extra" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Alumno" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Carrera" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Ciclo" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Consejero" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Coordinador" Width="1.5" PointX="1.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Curso" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Curso_Programado" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Estudio" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Facultad" Width="1.5" PointX="1.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Laboratorio" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Ocurrencias" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Profesor" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Registro_Usuario" Width="1.5" PointX="14.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Rol" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Sede" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Seleccion_Act_Extra" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Tipo_Nota" Width="1.5" PointX="5.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Sede" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Seleccion_Act_Extra" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Tipo_Nota" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
         <EntityTypeShape EntityType="CandidatosIsilModel.Tb_Usuario" Width="1.5" PointX="12" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Activi__id_ac__6477ECF3" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Activi__id_al__656C112C" ManuallyRouted="false" />
@@ -32,6 +33,7 @@
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Selecc__id_ac__60A75C0F" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Alumno__id_co__5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Estudi__id_al__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Ocurre__id_al__06CD04F7" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Selecc__id_al__619B8048" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Carrer__id_co__46E78A0C" ManuallyRouted="false" />
         <AssociationConnector Association="CandidatosIsilModel.FK__Tb_Carrer__id_fa__47DBAE45" ManuallyRouted="false" />

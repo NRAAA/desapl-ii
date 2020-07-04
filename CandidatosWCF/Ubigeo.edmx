@@ -4,7 +4,27 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="UBIGEOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="UBIGEOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'UBIGEO.dbo.MAE_UBIGEO' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="MAE_UBIGEO">
+          <Property Name="IdDepa" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdProv" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdDist" Type="nvarchar" MaxLength="255" />
+          <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+          <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+          <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'UBIGEO.dbo.MAE_UBIGEO2' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="MAE_UBIGEO2">
+          <Property Name="IdContinente" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdPais" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdCiudad" Type="nvarchar" MaxLength="255" />
+          <Property Name="Continente" Type="nvarchar" MaxLength="255" />
+          <Property Name="Pais" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
         <Function Name="UBIGEO_CIUDADESPAIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdContinente" Type="char" Mode="In" />
           <Parameter Name="IdPais" Type="char" Mode="In" />
@@ -27,7 +47,8 @@
           <Parameter Name="vdist" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="UBIGEOModelStoreContainer" />
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UBIGEOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -43,10 +64,10 @@
             <Parameter Name="IdProvincia" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="UBIGEO_PAISESCONTINENTE" ReturnType="Collection(UBIGEOModel.UBIGEO_PAISESCONTINENTE_Result)">
-          <Parameter Name="IdContinente" Mode="In" Type="String" />
+            <Parameter Name="IdContinente" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="UBIGEO_PROVINCIASDEPARTAMENTO" ReturnType="Collection(UBIGEOModel.UBIGEO_PROVINCIASDEPARTAMENTO_Result)">
-          <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+            <Parameter Name="IdDepartamento" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_UbigeoCadena" ReturnType="Collection(UBIGEOModel.usp_UbigeoCadena_Result)">
             <Parameter Name="vdepa" Mode="In" Type="String" />
