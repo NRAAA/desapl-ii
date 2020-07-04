@@ -268,22 +268,22 @@ namespace CandidatosWeb.ServiceAlumno {
     public interface IServicioAlumno {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorDni", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorDniResponse")]
-        CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorDni(string dni);
+        CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorDni(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorDni", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorDniResponse")]
-        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorDniAsync(string dni);
+        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorDniAsync(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorTelefono", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorTelefonoResponse")]
-        CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorTelefono(string telefono);
+        CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorTelefono(string telefono);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorTelefono", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorTelefonoResponse")]
-        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorTelefonoAsync(string telefono);
+        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorTelefonoAsync(string telefono);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorCorreo", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorCorreoResponse")]
-        CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorCorreo(string correo);
+        CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorCorreo(string correo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorCorreo", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorCorreoResponse")]
-        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorCorreoAsync(string correo);
+        System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorCorreoAsync(string correo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorNombreApellido", ReplyAction="http://tempuri.org/IServicioAlumno/ConsultarAlumnoPorNombreApellidoResponse")]
         CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorNombreApellido(string nombre, string apellido);
@@ -331,27 +331,27 @@ namespace CandidatosWeb.ServiceAlumno {
                 base(binding, remoteAddress) {
         }
         
-        public CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorDni(string dni) {
+        public CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorDni(string dni) {
             return base.Channel.ConsultarAlumnoPorDni(dni);
         }
         
-        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorDniAsync(string dni) {
+        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorDniAsync(string dni) {
             return base.Channel.ConsultarAlumnoPorDniAsync(dni);
         }
         
-        public CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorTelefono(string telefono) {
+        public CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorTelefono(string telefono) {
             return base.Channel.ConsultarAlumnoPorTelefono(telefono);
         }
         
-        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorTelefonoAsync(string telefono) {
+        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorTelefonoAsync(string telefono) {
             return base.Channel.ConsultarAlumnoPorTelefonoAsync(telefono);
         }
         
-        public CandidatosWeb.ServiceAlumno.AlumnoBE ConsultarAlumnoPorCorreo(string correo) {
+        public CandidatosWeb.ServiceAlumno.AlumnoBE[] ConsultarAlumnoPorCorreo(string correo) {
             return base.Channel.ConsultarAlumnoPorCorreo(correo);
         }
         
-        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE> ConsultarAlumnoPorCorreoAsync(string correo) {
+        public System.Threading.Tasks.Task<CandidatosWeb.ServiceAlumno.AlumnoBE[]> ConsultarAlumnoPorCorreoAsync(string correo) {
             return base.Channel.ConsultarAlumnoPorCorreoAsync(correo);
         }
         

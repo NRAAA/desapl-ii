@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Candidatos.aspx" />
     <Content Include="Connected Services\ServiceAlumno\CandidatosWeb.ServiceAlumno.AlumnoBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -112,7 +111,117 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Consultas\ByDNI.aspx" />
+    <Content Include="CSS\DemoCSS.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\Aceptar.png" />
+    <Content Include="Images\Agregar.png" />
+    <Content Include="Images\book_blue.png" />
+    <Content Include="Images\Borrar.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\Buscar.png" />
+    <Content Include="Images\cabinet.png" />
+    <Content Include="Images\Calc.png" />
+    <Content Include="Images\calculator.png" />
+    <Content Include="Images\Cancelar.png" />
+    <Content Include="Images\Consultas.jpg" />
+    <Content Include="Images\Control_Panel.png" />
+    <Content Include="Images\DaleU.jpg" />
+    <Content Include="Images\docOC.png" />
+    <Content Include="Images\docRD.png" />
+    <Content Include="Images\docRM.png" />
+    <Content Include="Images\docRP.png" />
+    <Content Include="Images\document_attachment.png" />
+    <Content Include="Images\document_certificate.png" />
+    <Content Include="Images\document_dirty.png" />
+    <Content Include="Images\document_lock.png" />
+    <Content Include="Images\Editar.png" />
+    <Content Include="Images\Estetoscopio.JPG" />
+    <Content Include="Images\fondo.jpg" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\indicator.gif" />
+    <Content Include="Images\InicioSesion.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading2.gif" />
+    <Content Include="Images\Logout.jpg" />
+    <Content Include="Images\Mantenimientos.jpg" />
+    <Content Include="Images\money.png" />
+    <Content Include="Images\moneybag.png" />
+    <Content Include="Images\note_new.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\p1.jpg" />
+    <Content Include="Images\p2.jpg" />
+    <Content Include="Images\p3.jpg" />
+    <Content Include="Images\p4.jpg" />
+    <Content Include="Images\p5.jpg" />
+    <Content Include="Images\p6.jpg" />
+    <Content Include="Images\p7.jpg" />
+    <Content Include="Images\Peru.png" />
+    <Content Include="Images\Testeo1.jpg" />
+    <Content Include="Images\Transacciones.jpg" />
+    <Content Include="Images\Ventas.jpg" />
     <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\ServiceAlumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceEstudio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceUbigeo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ByDNI.aspx.cs">
+      <DependentUpon>ByDNI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ByDNI.aspx.designer.cs">
+      <DependentUpon>ByDNI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DemoMaster.master.cs">
+      <DependentUpon>DemoMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DemoMaster.master" />
+    <None Include="Connected Services\ServiceAlumno\CandidatosWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlumno\service.wsdl" />
+    <None Include="Connected Services\ServiceAlumno\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlumno\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceEstudio\CandidatosWCF.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -133,43 +242,6 @@
     <None Include="Connected Services\ServiceUbigeo\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Candidatos.aspx.cs">
-      <DependentUpon>Candidatos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Candidatos.aspx.designer.cs">
-      <DependentUpon>Candidatos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ServiceAlumno\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ServiceEstudio\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ServiceUbigeo\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServiceAlumno\CandidatosWCF.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceAlumno\service.wsdl" />
-    <None Include="Connected Services\ServiceAlumno\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceAlumno\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -181,6 +253,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceAlumno\" />
     <WCFMetadataStorage Include="Connected Services\ServiceEstudio\" />
