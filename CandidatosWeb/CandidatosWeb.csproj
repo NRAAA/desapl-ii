@@ -90,6 +90,16 @@
     <Content Include="Connected Services\ServiceEstudio\CandidatosWeb.ServiceEstudio.AlumnoPorcInasistenciaBE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ServiceAlumno\CandidatosWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlumno\service.wsdl" />
+    <None Include="Connected Services\ServiceAlumno\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlumno\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceEstudio\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceEstudio\configuration.svcinfo" />
     <None Include="Connected Services\ServiceEstudio\Reference.svcmap">
@@ -255,16 +265,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DemoMaster.master" />
-    <None Include="Connected Services\ServiceAlumno\CandidatosWCF.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceAlumno\service.wsdl" />
-    <None Include="Connected Services\ServiceAlumno\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceAlumno\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\ServiceUbigeo\CandidatosWCF.xsd">
       <SubType>Designer</SubType>
     </None>

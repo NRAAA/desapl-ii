@@ -18,6 +18,14 @@ namespace CandidatosWeb.Historial
             {
                 this.tbDNI.Text = Session["dni"].ToString();
             }
+
+            if (Page.IsPostBack)
+            {
+                this.lblOcurrencias.Visible = false;
+                this.lblPorcInas.Visible = false;
+                this.lblPromCur.Visible = false;
+                this.lblCalificacion.Visible = false;
+            }
         }
 
         private void setUpGridView()
@@ -38,6 +46,19 @@ namespace CandidatosWeb.Historial
                 this.gvPromedioCurso.DataBind();
                 this.gvPorcInas.DataBind();
                 this.gvNotas.DataBind();
+
+
+                if (this.gvAlumno.Rows.Count == 0 || this.gvPromedioCurso.Rows.Count == 0 || this.gvPorcInas.Rows.Count == 0 || this.gvNotas.Rows.Count == 0)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('No se hallaron resultados');", true);
+                }
+                else
+                {
+                    this.lblOcurrencias.Visible = true;
+                    this.lblPorcInas.Visible = true;
+                    this.lblPromCur.Visible = true;
+                    this.lblCalificacion.Visible = true;
+                }
             }
 
         }
@@ -46,10 +67,7 @@ namespace CandidatosWeb.Historial
         {
             setUpGridView();
 
-            this.lblOcurrencias.Visible = true;
-            this.lblPorcInas.Visible = true;
-            this.lblPromCur.Visible = true;
-            this.lblCalificacion.Visible = true;
+            
         }
     }
 }

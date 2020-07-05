@@ -30,6 +30,11 @@ namespace CandidatosWeb.Consultas
                 Session["dni"] = dni;
                 this.gvAlumno.DataSource = servicioAlumno.ConsultarAlumnoPorDni(dni);
                 this.gvAlumno.DataBind();
+
+                if (this.gvAlumno.Rows.Count == 0)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('No se hallaron resultados');", true);
+                }else
                 this.btnSee.Visible = true;
             }
             

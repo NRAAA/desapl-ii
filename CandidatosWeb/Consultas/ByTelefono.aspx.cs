@@ -28,6 +28,11 @@ namespace CandidatosWeb.Consultas
             {
                 this.gvAlumno.DataSource = servicioAlumno.ConsultarAlumnoPorTelefono(tel);
                 this.gvAlumno.DataBind();
+
+                if (this.gvAlumno.Rows.Count == 0)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('No se hallaron resultados');", true);
+                }
             }
 
         }
