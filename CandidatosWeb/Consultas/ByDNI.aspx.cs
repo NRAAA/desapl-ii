@@ -27,8 +27,10 @@ namespace CandidatosWeb.Consultas
             }
             else
             {
+                Session["dni"] = dni;
                 this.gvAlumno.DataSource = servicioAlumno.ConsultarAlumnoPorDni(dni);
                 this.gvAlumno.DataBind();
+                this.btnSee.Visible = true;
             }
             
         }

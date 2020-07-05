@@ -14,7 +14,10 @@ namespace CandidatosWeb.Historial
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack && Session["dni"] != null)
+            {
+                this.tbDNI.Text = Session["dni"].ToString();
+            }
         }
 
         private void setUpGridView()

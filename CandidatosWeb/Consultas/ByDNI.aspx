@@ -13,6 +13,10 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/home.png" Width="55px" OnClientClick="window.open('../Home.aspx', '_self');return false;" />
+
+    <br />
+
     <table class="auto-style1">
         <tr>
             <td class="auto-style2">Ingrese número de documento: </td>
@@ -38,6 +42,11 @@
                 <asp:BoundField DataField="UbiAlumno" HeaderText="Zip" />
             </Columns>
         </asp:GridView>
+    </p>
+    <p class="center">
+        &nbsp;</p>
+    <p class="center">
+        <asp:Button ID="btnSee" runat="server" BorderStyle="None" ForeColor="Red" Text="Ver historial directamente" OnClientClick="window.open('../Historial/HistorialAcademico.aspx', '_self');return false;" Visible="False"/>
     </p>
 
 

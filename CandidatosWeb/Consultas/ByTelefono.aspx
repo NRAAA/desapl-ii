@@ -13,6 +13,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/home.png" Width="55px" OnClientClick="window.open('../Home.aspx', '_self');return false;" />
+    <br />
     <p>
         <table class="auto-style1">
             <tr>

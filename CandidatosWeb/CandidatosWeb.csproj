@@ -156,6 +156,7 @@
     <Content Include="Images\Estetoscopio.JPG" />
     <Content Include="Images\fondo.jpg" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\home.png" />
     <Content Include="Images\indicator.gif" />
     <Content Include="Images\InicioSesion.jpg" />
     <Content Include="Images\loading.gif" />

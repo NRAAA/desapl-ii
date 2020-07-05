@@ -15,6 +15,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/home.png" Width="55px" OnClientClick="window.open('../Home.aspx', '_self');return false;" />
+        <br />
+        <br />
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">Ingresa número de documento a consultar:</td>

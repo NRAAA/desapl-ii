@@ -19,7 +19,6 @@
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
     <div>
-       
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
          
         </asp:ContentPlaceHolder>
@@ -28,9 +27,7 @@
 
     </div>
     </form>
-    
-
-   
-      
+   <footer>Realizado por: Flavia Figueroa Castillo y Nicolás Rojas Artadi - Lima, Sábado 04 de Julio del 2020</footer>   
 </body>
+   
 </html>

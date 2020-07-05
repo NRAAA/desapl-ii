@@ -410,3 +410,8 @@ a {
 	width:150px !important;
 	font-size:12px !important;
 }
+
+#Footer {
+    position: fixed;
+    bottom: 0px;
+}
