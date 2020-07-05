@@ -27,7 +27,17 @@
         </table>
     </p>
     <p>
-        <asp:GridView ID="gvAlumno" runat="server">
+        <asp:GridView ID="gvAlumno" runat="server" AutoGenerateColumns="False" CellPadding="10">
+            <Columns>
+                <asp:BoundField DataField="DniAlumno" HeaderText="DNI" />
+                <asp:BoundField DataField="NombAlumno" HeaderText="Nombre" />
+                <asp:BoundField DataField="ApeAlumno" HeaderText="Apellidos" />
+                <asp:BoundField DataField="EmailAlumno" HeaderText="Email" />
+                <asp:BoundField DataField="TelAlumno" HeaderText="Teléfono" />
+                <asp:BoundField DataField="PromGlobal" HeaderText="Promedio Global" />
+                <asp:BoundField DataField="FecInscrip" HeaderText="Fecha de Inscripción" />
+                <asp:BoundField DataField="UbiAlumno" HeaderText="Zip" />
+            </Columns>
         </asp:GridView>
     </p>
 </asp:Content>

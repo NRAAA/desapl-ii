@@ -23,7 +23,7 @@ namespace CandidatosWeb.Consultas
 
             if (dni.Equals(""))
             {
-                
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Por favor, ingresa un número de documento');", true);
             }
             else
             {

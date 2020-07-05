@@ -12,46 +12,44 @@
         width: 379px;
         text-align: center;
     }
-</style>
+        .auto-style6 {
+            margin-left: 2px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p class="center">
-    Candidatos: Home</p>
+    <h1 class="center">
+        Validación de postulantes</h1>
 <p class="center">
     &nbsp;</p>
 <p class="center">
-    <asp:Button ID="btnTop5" runat="server" Text="Ver top 5 Alumnos en Isil" OnClick="btnTop5_Click"/>
-</p>
-<p class="center">
-    &nbsp;</p>
-<p>
-    <asp:GridView ID="gvTop5" runat="server">
+    <strong>TOP 5 ALUMNOS EN ISIL</strong></p>
+    <div class="center">
+    <asp:GridView ID="gvTop5" runat="server" CellPadding="10" HorizontalAlign="Center" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="DniAlumno" HeaderText="DNI" />
+            <asp:BoundField DataField="NombAlumno" HeaderText="Nombre" />
+            <asp:BoundField DataField="ApeAlumno" HeaderText="Apellidos" />
+            <asp:BoundField DataField="EmailAlumno" HeaderText="Email" />
+            <asp:BoundField DataField="TelAlumno" HeaderText="Teléfono" />
+            <asp:BoundField DataField="PromGlobal" HeaderText="Promedio Global" />
+            <asp:BoundField DataField="FecInscrip" HeaderText="Fecha de Inscripción" />
+            <asp:BoundField DataField="UbiAlumno" HeaderText="Zip" />
+        </Columns>
     </asp:GridView>
-</p>
-<p class="center">
+    </div>
+<p>
     &nbsp;</p>
-<p class="center">
-    &nbsp;</p>
+    <p>
+        &nbsp;</p>
 <p class="center">
     Ver información del alumno por:</p>
 <p class="center">
-    &nbsp;</p>
-<table class="auto-style1">
-    <tr>
-        <td class="auto-style5">
-            <asp:Button ID="btnConsultaDNI" runat="server" Text="DNI" OnClientClick="window.open('Consultas/ByDNI.aspx', '_self');return false;" />
-        </td>
-        <td class="auto-style4">
+            <asp:Button ID="btnConsultaDNI" runat="server" Text="DNI" OnClientClick="window.open('Consultas/ByDNI.aspx', '_self');return false;"  />
             <asp:Button ID="btnTelefono" runat="server" Text="Teléfono" OnClientClick="window.open('Consultas/ByTelefono.aspx', '_self');return false;"/>
-        </td>
-        <td class="center">
             <asp:Button ID="btnCorreo" runat="server" Text="Correo" OnClientClick="window.open('Consultas/ByCorreo.aspx', '_self');return false;"/>
-        </td>
-        <td class="center">
             <asp:Button ID="btnNomApe" runat="server" Text="Nombre y apellido" OnClientClick="window.open('Consultas/ByNomApe.aspx', '_self');return false;"/>
-        </td>
-    </tr>
-</table>
+        </p>
 
     <p class="center">
         &nbsp;</p>

@@ -17,16 +17,26 @@
         <tr>
             <td class="auto-style2">Ingrese número de documento: </td>
             <td class="auto-style3">
-                <asp:TextBox ID="tbDNI" runat="server" Width="185px"></asp:TextBox>
+                <asp:TextBox ID="tbDNI" runat="server" Width="185px" TextMode="Number"></asp:TextBox>
             </td>
             <td>
-                <asp:Button ID="btnConsultar" runat="server" OnClick="btnConsultar_Click" Text="Button" />
+                <asp:Button ID="btnConsultar" runat="server" OnClick="btnConsultar_Click" Text="Consultar" />
             </td>
         </tr>
     </table>
 
     <p class="center">
-        <asp:GridView ID="gvAlumno" runat="server">
+        <asp:GridView ID="gvAlumno" runat="server" AutoGenerateColumns="False" CellPadding="10">
+            <Columns>
+                <asp:BoundField DataField="DniAlumno" HeaderText="DNI" />
+                <asp:BoundField DataField="ApeAlumno" HeaderText="Apellidos" />
+                <asp:BoundField DataField="NombAlumno" HeaderText="Nombre" />
+                <asp:BoundField DataField="EmailAlumno" HeaderText="Email" />
+                <asp:BoundField DataField="TelAlumno" HeaderText="Teléfono" />
+                <asp:BoundField DataField="PromGlobal" HeaderText="Promedio global" />
+                <asp:BoundField DataField="FecInscrip" HeaderText="Fecha de Inscripción" />
+                <asp:BoundField DataField="UbiAlumno" HeaderText="Zip" />
+            </Columns>
         </asp:GridView>
     </p>
 

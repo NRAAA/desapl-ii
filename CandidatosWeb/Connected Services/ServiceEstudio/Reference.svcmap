@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2288ab3-7254-49fc-ac59-4ba1609e14f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b5b5e8e5-910c-4a53-853d-6fade5aa7509" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bc6ab2e2-d813-4c19-a770-bcd674556320" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3e2a3b70-7426-4050-a874-fda4af2b7308" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b7c09015-7bf6-420e-8a35-44be329c382e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
-    <MetadataFile FileName="CandidatosWCF.xsd" MetadataType="Schema" ID="34ce17ad-d4b9-4ad2-9582-dfefb06bf40d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e7a135d0-66d4-462b-8caa-760e828ab6be" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0417157a-f3b1-4edb-b8fe-fb040ca76c2e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="63c429c2-d9b6-49df-8395-880bc6af4f06" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
+    <MetadataFile FileName="CandidatosWCF.xsd" MetadataType="Schema" ID="367dfb22-2258-41f1-b228-cdc4da5f2c0b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CandidatosWCF/ServicioEstudio/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

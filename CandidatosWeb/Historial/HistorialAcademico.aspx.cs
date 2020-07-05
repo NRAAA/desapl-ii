@@ -23,7 +23,7 @@ namespace CandidatosWeb.Historial
 
             if (dni.Equals(""))
             {
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Por favor, ingresa un número de documento');", true);
             }
             else
             {
@@ -42,6 +42,11 @@ namespace CandidatosWeb.Historial
         protected void btnConsultar_Click(object sender, EventArgs e)
         {
             setUpGridView();
+
+            this.lblOcurrencias.Visible = true;
+            this.lblPorcInas.Visible = true;
+            this.lblPromCur.Visible = true;
+            this.lblCalificacion.Visible = true;
         }
     }
 }

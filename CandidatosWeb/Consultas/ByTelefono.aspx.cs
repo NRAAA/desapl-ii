@@ -22,7 +22,7 @@ namespace CandidatosWeb.Consultas
 
             if (tel.Equals(""))
             {
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Por favor, ingresa un número de celular');", true);
             }
             else
             {

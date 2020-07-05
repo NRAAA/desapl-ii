@@ -22,7 +22,7 @@ namespace CandidatosWeb.Consultas
 
             if (correo.Equals(""))
             {
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Por favor, ingresa un correo');", true);
             }
             else
             {

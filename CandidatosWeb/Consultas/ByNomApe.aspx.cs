@@ -23,7 +23,7 @@ namespace CandidatosWeb.Consultas
 
             if (nombre.Equals("") || apellido.Equals(""))
             {
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Por favor, completa ambos campos');", true);
             }
             else
             {

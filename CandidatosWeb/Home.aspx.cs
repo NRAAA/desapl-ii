@@ -15,30 +15,13 @@ namespace CandidatosWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            setUpGridView();
         }
 
         private void setUpGridView()
         {
             this.gvTop5.DataSource = servicioAlumno.ConsultarTopCincoAlumnos();
             this.gvTop5.DataBind();
-        }
-
-        protected void btnTop5_Click(object sender, EventArgs e)
-        {
-            
-            setUpGridView();
-            
-
-            if (secondClick)
-            {
-                secondClick = false;
-                this.gvTop5.Visible = false;
-            }
-            else
-            {
-                secondClick = true;
-                this.gvTop5.Visible = true;
-            }
         }
         
     }
