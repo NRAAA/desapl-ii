@@ -10,8 +10,7 @@ namespace CandidatosWeb
     public partial class Home : System.Web.UI.Page
     {
         ServiceAlumno.ServicioAlumnoClient servicioAlumno = new ServiceAlumno.ServicioAlumnoClient();
-
-        Boolean secondClick = false;
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {

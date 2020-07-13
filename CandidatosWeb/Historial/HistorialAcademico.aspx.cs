@@ -48,7 +48,7 @@ namespace CandidatosWeb.Historial
                 this.gvNotas.DataBind();
 
 
-                if (this.gvAlumno.Rows.Count == 0 || this.gvPromedioCurso.Rows.Count == 0 || this.gvPorcInas.Rows.Count == 0 || this.gvNotas.Rows.Count == 0)
+                if (this.gvAlumno.Rows.Count == 0 && this.gvPromedioCurso.Rows.Count == 0 && this.gvPorcInas.Rows.Count == 0 && this.gvNotas.Rows.Count == 0)
                 {
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('No se hallaron resultados');", true);
                 }

@@ -93,8 +93,8 @@
     <p class="center">
         <asp:GridView ID="gvNotas" runat="server" AutoGenerateColumns="False" CellPadding="10">
             <Columns>
-                <asp:BoundField DataField="ApeAlumno" HeaderText="Apellidos" />
                 <asp:BoundField DataField="NombAlumno" HeaderText="Nombres" />
+                <asp:BoundField DataField="ApeAlumno" HeaderText="Apellidos" />
                 <asp:BoundField DataField="Curso" HeaderText="Curso" />
                 <asp:BoundField DataField="Profesor" HeaderText="Profesor" />
                 <asp:BoundField DataField="TituloAct" HeaderText="Titulo de la Actividad" />
@@ -102,7 +102,6 @@
                 <asp:BoundField DataField="ComentariosProfesor" HeaderText="Comentarios del profesor" />
                 <asp:BoundField DataField="TipoNota" HeaderText="Tipo de nota" />
                 <asp:BoundField DataField="Nota" HeaderText="Nota" />
-                <asp:BoundField DataField="DescAct" HeaderText="DescAct" />
             </Columns>
         </asp:GridView>
     </p>
