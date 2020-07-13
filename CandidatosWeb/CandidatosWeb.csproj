@@ -171,6 +171,7 @@
     <Content Include="Images\InicioSesion.jpg" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\loading2.gif" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Images\Logout.jpg" />
     <Content Include="Images\Mantenimientos.jpg" />
     <Content Include="Images\money.png" />

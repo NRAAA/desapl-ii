@@ -1,27 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DemoMaster.master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="CandidatosWeb.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-    .auto-style1 {
-        width: 100%;
-    }
-    .auto-style4 {
-        width: 405px;
-        text-align: center;
-    }
-    .auto-style5 {
-        width: 379px;
-        text-align: center;
-    }
-        .auto-style6 {
-            margin-left: 2px;
+        .auto-style1 {
+            width: 245px;
+            height: 142px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="center">
         Validación de postulantes</h1>
+    <p class="center">
+        &nbsp;</p>
 <p class="center">
-    &nbsp;</p>
+    <img alt="" class="auto-style1" src="Images/logo.jpg" /></p>
+    <p class="center">
+        &nbsp;</p>
 <p class="center">
     <strong>TOP 5 ALUMNOS EN ISIL</strong></p>
     <div class="center">
